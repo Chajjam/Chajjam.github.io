@@ -5,3 +5,170 @@ categories: Discrete_Mathematics
 ---
 
 **Chpater 1 The Foundations: Logic and Proofs*
+
+**1.1 Propositional Logic**
+Proposition : a declarative sentence that is either true or false, but not both
+
+*Example 1*
+All the following declarative sentences are propositions
+    1. Washington, D.C., is the captial of the United States of America
+      => true
+    2. Toronto is the capital of Canada
+      => false
+    3. 1 + 1 = 2
+      => true
+    4. 2 + 2 = 3
+      => false
+      
+*Example 2*
+Consider the following sentences
+    1. What time is it?       => not a proposition because not declarative
+    2. Read this carefully.   => not a proposition because not declarative
+    3. x + 1 = 2              => not a proposition because neither true nor false
+    4. x + y = z              => not a proposition because neither true nor false
+
+Conventional letters for propositional variables : p, q, r, s...
+Letter for truth value : T and F
+
+New propositions, called compound propositions, are formed by from existing propositions using logical operators
+
+**DEFINITION 1**
+Let p be a proposition.
+The negation of p, denoted by ¬p (or p bar) (I will write this in ~p from now) is  "it is not the case that p"
+The proposition ~p is read "not p".
+The truth value of the negation of p, ~p, is the opposite of the truth value of p.
+
+*Example 3*
+Find the negation of the proposition
+  "Michael's PC runs Linux"
+and express this in simple English
+
+My Answer:
+  "Michael's PC does not run Linux"
+  
+Solution:
+  Negation: "It is not the case that Michael's PC runs Linux"
+  Simple En : "Michael's PC does not run Linux"
+  
+*Example 4*
+Find the negation of the proposition
+  "Vandana's smartphone has at leaset 32GB of memory"
+and in simple English
+
+My Answer:
+  Negation: "It is not the case that Vandana's smartphone has at least 32GB of memory"
+  Simple En : "Vandana's smartphone has memory less than 32GB."
+
+**DEFINITION 2**
+Let p and q be propositions. The conjunction of p and q, denoted by p∧q, is the proposition
+"p and q". The conjunction p∧q is true when both p and q are true and is false otherwise.
+  * "but" is sometimes used instead of "and" (ex: "Thu sun is shining, but(=and) it is raining")
+
+*Example 5*
+Find the conjunction of propositions p and q where 
+p: "Rebecca's PC has more than 16GB free hard disk space."
+q: "The processor in Rebecca's PC runs faster than 1 GHz."
+
+My Answer:
+"Rebecca's PC has more than 16GB free hard disk space and the processor in Rebecca's PC runs faster than 1GHz."
+
+Solution:
+"Rebecca's PC has more than 16GB free hard disk space, and its processor runs faster than 1GHz."
+
+**DEFINITION 3**
+Let p and q be propositions.
+The disjunction of p and q, denoted by p∨q, is the proposition "p or q".
+The disjunction p∨q is false when both p and q are false and is true otherwise
+*includes both inclusive(both true) and exclusive(if one is true and another is false) or
+
+*Example 6*
+What is the disjunction of the propositions p and q where p and q are the same propositions as in Example 5?
+p: "Rebecca's PC has more than 16GB free hard disk space."
+q: "The processor in Rebecca's PC runs faster than 1 GHz."
+
+My Answer:
+"Rebecca's PC has more than 16GB free hard disk space or its processor runs faster than 1 GHz."
+
+Solution:
+"Rebecca's PC has at least 16GB free hard disk space, or the processor in Rebecca's PC runs faster than 1GHz."
+
+**DEFINITION 4**
+Let p and q be propositions. The exclusive or of p and q, denoted by p⊕q, is the proposition
+that is true when exactly one of p and q is true and false otherwise.
+
+**DEFINITION 5**
+Let p and q be propositions.
+The conditional statement p -> q is the proposition "if p, then q."
+The conditional statement p -> q is false when p is true and q is false, and true otherwise.
+In the conditional statement p -> q, p is called the hypothesis (or antecedent/premise)
+                                     q is called the conclusion (or consequence)
+* Conditional statement is also called an implication
+
+terminologies used to express conditional statements:
+- if p, then q
+- p implies q
+- if p, q
+- p only if q
+- p is sufficient for q
+- a sufficient condition for q is p
+- q if p
+- q whenever p
+- q when p
+- q is necessary for p
+- a necessary condition for p is q
+- q follows from p
+- q unless ~p
+
+*Example 7*
+Let p be the statement "Maria learns discrete mathematics"
+and q the statement "Maria will find a good job."
+Express the statemnet p -> q as a statement in English
+
+My Answer:
+"If Maria learns discrete Mathematics, she will find a good job."
+
+* Caution: Conditional statements in daily lives differ from conditional statement in logics
+ex:
+"If Juan has a smartphone, then 2 + 3 = 5"
+  => true, because q is true
+"If Juan has a smartphone, then 2 + 3 = 6"
+  => true if Juan does not have a smartphone because p is false
+  
+*Example 8*
+What is the value of the variable x after the statement
+  if 2 + 2 = 4 then x := x + 1
+if x = 0 before this statement is encountered? (:= stands for assignment)
+
+My Answer:
+1
+
+
+
+----------------------------------
+**DEFINITIONS**
+
+**DEFINITION 1**
+Let p be a proposition.
+The negation of p, denoted by ¬p (or p bar) (I will write this in ~p from now) is  "it is not the case that p"
+The proposition ~p is read "not p".
+The truth value of the negation of p, ~p, is the opposite of the truth value of p.
+
+**DEFINITION 2**
+Let p and q be propositions. The conjunction of p and q, denoted by p∧q, is the proposition
+"p and q". The conjunction p∧q is true when both p and q are true and is false otherwise.
+
+**DEFINITION 3**
+Let p and q be propositions.
+The disjunction of p and q, denoted by p∨q, is the proposition "p or q".
+The disjunction p∨q is false when both p and q are false and is true otherwise
+
+**DEFINITION 4**
+Let p and q be propositions. The exclusive or of p and q, denoted by p⊕q, is the proposition
+that is true when exactly one of p and q is true and false otherwise.
+
+**DEFINITION 5**
+Let p and q be propositions.
+The conditional statement p -> q is the proposition "if p, then q."
+The conditional statement p -> q is false when p is true and q is false, and true otherwise.
+In the conditional statement p -> q, p is called the hypothesis (or antecedent/premise)
+                                     q is called the conclusion (or consequence)
