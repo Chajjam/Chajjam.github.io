@@ -1,0 +1,70 @@
+---
+title: "Computer Architecture Day 1"
+date: 2021-06-19 -0400
+categories: computer_architecture
+---
+
+Reference : Computer Organization and Design 5th edition
+
+$ Chapter 1 Computer Abstractions and Technology $
+
+
+1.1 Introduction
+
+3 different classes of copmuting applications:
+- Personal computers (PCs) ---> Personal mobile device (PMD)
+- Servers                  ---> Cloud computing
+- Embedded computers
+
+
+1.2 Eight Great Ideas in Computer Architecture
+
+1) Design for Moore's Law (Graph)
+  Moore's Law : integrated circuit resources double every 18-24 months
+  Computer architects must anticipate where the technology will be when the design finshes, not when it starts
+  
+2) Use Abstraction to Simply Design (Picasso)
+  Use abstractions to represent the design effectively
+  
+3) Make the Common Case Fast (Car)
+  Enhance performance better than optimizing the rare case, and is also simpler
+
+4) Performance via Parallism (Airplane)
+  Designs that get more performance by performing operations in parallel
+  
+5) Performance via Pipelining (Pipe)
+  Pipelining : a particular pattern of parallelism
+
+6) Performance via Prediction (Crystall Ball)
+  Sometimes it is faster if recoverable and relatively accurate
+  
+7) Hierarchy of Memories (Pyramid)
+
+8) Dependability via Redundancy (Truck)
+  Make systems dependable by including redundant components that can take over when a failure occurs and to help detect failures
+
+
+1.3 Below Your Program
+
+
+-------------------------------------------
+
+* Vocab
+  
+- Personal computers (PCs)
+  : a computer for an individual, usually with a graphic display, a keyboard, and a mouse
+
+- Server
+  : a computer for larger programs and accessed only via a network
+ 
+- Embedded computers
+  : a computer inside another device and used for running a single or a collection of software
+  
+- Personal mobile device (PMD)
+  : small, wireless devices to connect to the Internet (ex: smart phones, tablets)
+  
+- Cloud Computing
+  : larger collections of servers that provide services over the Internet. Relies on giant datacenters known as Warehouse Scale Copmuters (WSCs)
+  
+- Software as a service (SaaS)
+  : delivers software and data as a service over the Internet (ex: web search, social networking)
