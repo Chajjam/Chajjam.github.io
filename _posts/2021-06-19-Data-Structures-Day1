@@ -1,0 +1,152 @@
+---
+title: "Data Structures Day 1"
+date: 2021-06-19 14:09 -0400
+categories: Data_Structure
+---
+
+Reference : Data Structures & Algorithms in C++ 2nd Edition
+
+
+**Chpater 1 A C++ Primer**
+
+**$ 1.1 Basic C++ Programming Elements $ **
+
+
+**1.1.1 A Simple C++ Program**
+
+Steps for running C++ program
+1) create a c++ source file
+2) run a compiler
+3) run a linker (typically invoked by the compiler)
+   => includes any required library code functions needed and produces the final executable file
+   
+```C++
+#include <cstdlib>
+#include <iostream>
+
+int main() {
+  int x, y;
+  std::cout << "Please enter two number: ";
+  std::cin >> x >> y;
+  int sum = x + y;
+  std::cout << "There sum is " << sum << std::endl;
+  return EXIT_SUCCESS;
+}
+```
+- Comments are indicated with two slashes (//)
+- Longer block comments are enclosed between /* */
+- Operators >> and << are used for input and output
+
+- Lines 1 and 2 input *header files* cstdlib and iostream
+  cstdlib : standard system definitions
+  iostream : definitions for input and output
+  
+- Initial entry point is the function *main*
+  By convention, main function returns 0 to indicate success and returns a nonzero value to indicate failure
+  EXIT_SUCCESS
+  
+- Function body is given within {}
+
+- std::cout : standard output stream
+- std::cin : standard input stream
+- std::cerr : standard error
+- std:: : the objects are from the system's *standard library*
+- can omit the prefix by *using*
+
+```C++
+#include <iostream>
+using namespace std;
+
+cout << "Please enter two numbers: ";
+cin >> x >> y;
+```
+
+
+**1.1.2 Fundamental Types**
+- Integral Types
+  - enum    a set of discrete values
+  - bool    boolean, either true or false
+  - char    character
+  - int     integer
+- short     short integer
+- long      long integer
+- float     single-precision floating-point number
+- double    double-precision floating-point number
+- void      absence of type
+
+*Characters*
+- holds a single character
+- typically 8-bits, but can be modified by C++'s flexibility
+- literal : a constant value enclosed in single quotes
+  * special character literals (with \) :
+    '\n'  newline
+    '\t'  tab
+    '\b'  backspace
+    '\0'  null (also indicate the end of a string of characters)
+    '\''  single quote
+    '\"'  double quote
+    '\\'  backslash
+- every character is associated with an integer code
+  => int(ch) returns it
+
+*Integers*
+- holds an integer
+- three sizes : short int (short), int (int), long int (long)
+  * suffixes l or L can be added to make a long integer (ex: 12345L)
+- Octal (base 8) constants : prefixing number with zero digit (256 -> 0400)
+- Hexadecimal (base 16) constants : prefixing the number with 0x (256 -> 0x100)
+* When declaring a variable, we can provide a *definition* or initial value.
+  If not, the initial value is unpredictable.
+* Rules for Variable names: may consist of letters, digits, underscores
+                            first character cannot be a digit
+                            it is better to avoid underscore as first char because some C++ compilers use this to define
+- short is at least 16 bits, long is at least 32 bits
+- sizeof(T) returns the size of type T, expressed as multiples of size of char
+  ex) if char is 8 bits, int is 32 bits => sizeof(int) == 4
+
+*Enumerations*
+- a user-defined type that can hold any of a set of discrete values
+- int-like behavior
+- each element of an enumeration is associated with an integer value
+- conventionally write enumerations with capital letters
+```C++
+enum Day { SUN, MON, TUE, WED, THU, FRI, SAT }; // no specification; SUN would be 0, MON, would be 1
+enum Mood { HAPPY = 3, SAD = 1, ANXIOUS = 4, SLEEPY = 2 };  
+
+Day today = THU;
+Mood myMood = SLEEPY;
+```
+
+*Floating Point*
+- float holds a single-precision floating-point number
+- double holds a double-precision floating-point number
+- mostly double by default
+  To force a literal to be a float, add suffix f or F (ex: 2.0f)
+
+
+**1.1.3 Pointers, Arrays, and Structures**
+
+*Pointers*
+- each variable is stored at some address
+- pointer is a variable that holds the value of an address
+- Given type T, the type T* denotes a pointer to a variable of type T
+- & (address-of operator) : returns the address of an object
+- * : access an object's value from address (dereferencing)
+- null pointer : points to nothing, assigned the value zero, dereferncing results in a runtime error
+  NULL : activated by #include <cstdlib>
+- cannot declare void variable, but can declare void* variable
+  it can point to a variable of any type, but it is discouraged due to absence of compiler check
+
+*Arrays*
+- a collection of elements of the same type
+- T[N] holds an array of N elements with type T
+- elements are referenced by its index (0 - N-1)
+- once declared, cannot increase the number of elements in an array
+- can initialize by indicating values then the compiler figures the size out
+- can declare an array of pointers
+  ex: int* r[17] declares an array of r consisting of 17 pointers to int
+      *r[16] ix the value of the integer pointed by last element
+
+*Pointers and Arrays*
+
+
