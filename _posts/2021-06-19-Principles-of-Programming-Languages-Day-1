@@ -1,0 +1,61 @@
+---
+title: "Principles of Programming Languages Day 1"
+date: 2021-06-19 18:19 -0400
+categories: Principles_of_Programming_Languages
+---
+
+**Chpater 1 Inductive Sets of Data**
+
+**1.1 Recursively Specified Data**
+
+**1.1.1 Inductive Specification**
+
+Inductive Specification: method of specifying a set of values
+- consider a certain subset S of the natural numbers N = { 0, 1, 2, ... }
+**Definition 1.1.1**
+A natural number n is in S if and only if
+1. n = 0, or
+2. n-3 ∈ S.
+=> conc. S is the set of natural numbers that are multiples of 3
+
+use this definition to write a procedure to decide whether a natural number n is in S.
+
+```C
+in-S? : N -> Bool
+usage:  (in-S? n) = #t if n is in S, #f otherwise
+(define in-S?
+  (lambda (n)
+    (if (zero? n) #t
+      (if (>= (- n 3) 0)
+        (in-S? (- n 3) )
+        #f))))
+```
+
+```C
+in-S? : N -> Bool
+```
+Contract: a comment for the procedure
+Here, it means that *in-S?* is intended to be a procedure that takes a natural number and produces a boolean
+
+To determine whether n∈S, we first ask whether n = 0.
+If it is, then the answer is true.
+
+Otherwise, we need to see whether n - 3 ∈ S.
+To do this, we first check to see whether (n - 3) ≥ 0.
+If it is, we then can use our procedure to see whether it is in S.
+If it is not, then n cannot be in S.
+
+**Definition 1.1.2**
+Define the set S to be the smallest set contained in N and satisfying the following two properties:
+1. 0∈S, and
+2. if n∈S, then n+3∈S.
+
+smallest set: one that satisfies the properties and is a subset of any other set satisfying the properties
+To show there can be only one such set:
+if S_1 and S_2 both satisfy properties 1 and 2, and both are amllest, then
+S_1⊆S_2 (Since S_1 is smallest), and
+S_2⊆S_2 (Since S_2 is smallest), hence
+S_1 = S_2.
+
+
+
