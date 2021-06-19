@@ -6,10 +6,10 @@ categories: computer_architecture
 
 Reference : Computer Organization and Design 5th edition
 
-$ Chapter 1 Computer Abstractions and Technology $
+**$ Chapter 1 Computer Abstractions and Technology $**
 
 
-1.1 Introduction
+**1.1 Introduction**
 
 3 different classes of copmuting applications:
 - Personal computers (PCs) ---> Personal mobile device (PMD)
@@ -17,7 +17,7 @@ $ Chapter 1 Computer Abstractions and Technology $
 - Embedded computers
 
 
-1.2 Eight Great Ideas in Computer Architecture
+**1.2 Eight Great Ideas in Computer Architecture**
 
 1) Design for Moore's Law (Graph)
   Moore's Law : integrated circuit resources double every 18-24 months
@@ -44,7 +44,7 @@ $ Chapter 1 Computer Abstractions and Technology $
   Make systems dependable by including redundant components that can take over when a failure occurs and to help detect failures
 
 
-1.3 Below Your Program
+**1.3 Below Your Program**
 
 Hierarchy of software : (Lowest) Hardware -> Systems Software -> Applications Software
 
