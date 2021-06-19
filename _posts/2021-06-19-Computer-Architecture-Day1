@@ -46,6 +46,18 @@ $ Chapter 1 Computer Abstractions and Technology $
 
 1.3 Below Your Program
 
+Hierarchy of software : (Lowest) Hardware -> Systems Software -> Applications Software
+
+Two important types of systems software : Operating System & Compiler
+- OS : interfaces between a user's program and hardware.
+       Provide many services and supervisory functions
+       Important funcionts:
+        - Handling basic input and output operations
+        - Allocating storage and memory
+        - Providing for protected sharing of the computer among multiple applications using it simultaneously
+- Compilers : translate a program written in high-level languages into instructions that hardware can execute
+
+
 
 -------------------------------------------
 
@@ -68,3 +80,12 @@ $ Chapter 1 Computer Abstractions and Technology $
   
 - Software as a service (SaaS)
   : delivers software and data as a service over the Internet (ex: web search, social networking)
+  
+- Systems Software
+  : Software that provides services that are commonly useful like operating systems, compilers, loaders, assemblers...
+
+- Operating System
+  : Supervising program that manages the resources of a computer for the benefit of the programs that run on that computer
+  
+- Compiler
+  : A program that translates high-level language statements into assembly language statements
