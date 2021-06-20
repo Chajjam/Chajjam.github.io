@@ -57,7 +57,34 @@ Two important types of systems software : Operating System & Compiler
         - Providing for protected sharing of the computer among multiple applications using it simultaneously
 - Compilers : translate a program written in high-level languages into instructions that hardware can execute
 
+- The easiest signals for computers are on and off: 0 and 1 => binary numbers
+- Instructions are collections of bits that our computer understands and obeys
+  ex) 1000110010100000 tells a computer to add two numbers
+- first used binary numbers (tedious)
+  => invented noations and translated them to binary by hand (less, but still tedious)
+  => invented a program to translate symbolic notation to binary; i.e. assember!
+     ex) the programmer writes    :   add A,B           (assembly language)
+         the assember translates  :   1000110010100000  (machine language)
+  => now high-level prgramming languages and compilers : instructions to instructions
+     ex) A + B -> add A,B -> 1000110010100000
+     benefits:
+      - programmers can think in a more natural language
+      - languages can be designed according to their intended use
+        ex) Fortran for scientific computation, Cobol for business data processing, Lisp for symbol manipulation
+      - improved programmer productivity
+      - allows programs to be independent of the computer on which they were developed
+        (because compilers and assemblers translate to the binary!)
 
+
+**1.4 Under the Covers**
+
+Basic functions of the hardware: inputting, outputting, processing, storing data
+5 key components of a computer that performs the basic functions:
+1) input
+2) output
+3) memory
+4) datapath (called the processor with control)
+5) control  (called the processor with datapath)
 
 -------------------------------------------
 
@@ -89,3 +116,36 @@ Two important types of systems software : Operating System & Compiler
   
 - Compiler
   : A program that translates high-level language statements into assembly language statements
+
+- Binary Digit (bit)
+  : one of the two numbers in base 2 (0 or 1) that are the components of information
+
+- Instruction
+  : A command that computer hardware understands and obeys
+
+- Assembler
+  : A program that translates a symbolic version of instructions into the binary version
+
+- High-level Programming Languages
+  : A portable language such as C, C++, Java, or Visual Basic that is composed of words and algebraic
+    notation that can be translated by a compiler into assembly language
+
+- Input Device
+: A mechanism through which the computer is fed information, such as a keyboard
+
+- Output Device
+: A mechanism that conveys the result of a computation to a user, such as a display, or to another computer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
