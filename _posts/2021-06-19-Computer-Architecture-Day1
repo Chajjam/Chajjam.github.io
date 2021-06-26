@@ -86,6 +86,28 @@ Basic functions of the hardware: inputting, outputting, processing, storing data
 4) datapath (called the processor with control)
 5) control  (called the processor with datapath)
 
+THe most fascinating I/O device: graphics display
+Liquid crystal displays (LCDs)
+- does not produce light, but controls the transmission of light
+- rod-shaped molecules in a liquid bends light entering the display; rods straighten out when
+  a current is applied and no longer bend the light
+- LCD displays today use an active matrix for better image quality
+- the image is composed of pixels
+- 8 bits for each of the three colors, 24bits per pixel
+- bit map : matrix of bits
+
+computer hardware support for graphics : raster refresh buffer (frame buffer) 
+  - image to be represented on screen is stored in the frame buffer
+  - bit pattern per pixel is read out ot the graphics display at the refresh rate
+
+Touchscreen
+- today many use capccitive sensing
+  - people are electrical conductors
+  - if an insulator like glass is covered with a transparent conductor, touching distorts the
+    electrostatic field of the screen
+
+
+
 -------------------------------------------
 
 * Vocab
@@ -131,17 +153,37 @@ Basic functions of the hardware: inputting, outputting, processing, storing data
     notation that can be translated by a compiler into assembly language
 
 - Input Device
-: A mechanism through which the computer is fed information, such as a keyboard
+  : A mechanism through which the computer is fed information, such as a keyboard
 
 - Output Device
-: A mechanism that conveys the result of a computation to a user, such as a display, or to another computer
+  : A mechanism that conveys the result of a computation to a user, such as a display, or to another computer
 
+- Liquid Crystal Displays (LCDs)
+  : A display technology using a thin layer of liquid polymers that can be used to transmit or block
+    light according to whether a charge is applied
 
+- Active Matrix Display
+  : A liquid crystal display using a transistor to control the transmission of light at each individual pixel
+  
+- Pixel
+  : The smallest individual picture element
 
+- Integrated Circuit (Chip)
+  : A device combining ddozens to millions of transistors
 
+- Datapath
+  : The component of the processor that performs arithmetic operations
+  
+- Control
+  : The component of the processor that commands the datapath, memory, and I/O devices according
+    to the instructions of the programm
 
+- Memory
+  : The storage area in which programs are kept when they are running and that contains the data
+    needed by the running programs
 
-
+- Dynamic Random Access Memory (DRAM)
+  : Memory built as an integrated circuit; it provides random access to any location.
 
 
 
