@@ -1,6 +1,6 @@
 ---
 title: "ML Week 2 Linear Regression"
-date: 2021-06-26 -0400
+date: 2021-06-26
 categories: Linear_Regression
 ---
 **2.1 Linear Regression with One Variable: Model Representation**\
@@ -18,8 +18,8 @@ Training set\
 &nbsp; 2 Price ($) in 1000's (y)\
 \
 Training set -(feed)-> Learning algorithm -> hypothesis(h)\
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (size of house(x) -> h -> estimated price(y))\
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; => h maps from x's to y's\
+hypothesis: size of house(x) -> h -> estimated price(y)\
+=> h maps from x's to y's\
 \
 How do we represent h?\
 h<sub>Θ</sub>(x) = h(x) = Θ<sub>0</sub> + Θ<sub>1</sub>x\
