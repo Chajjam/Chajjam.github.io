@@ -54,34 +54,4 @@ Which of the examples would you use an unsupervised learning algorithm?\
 &nbsp; 3 given customer data, discover market segments and group customers into different market segments\
 &nbsp; 4 given patients data as either diabetes or not, learn to classify new patients as diabetes or not\
 \
-My answer: 2, 3 (correct)\
-\
-\
-**2.1 Linear Regression with One Variable: Model Representation**\
-\
-Notation:\
-&nbsp; m = Number of training examples\
-&nbsp; x = input variable/features\
-&nbsp; y = output variable/target variable\
-&nbsp; (x, y) = one training example\
-&nbsp; (x<sup>(i)</sup>, y<sup>(i)</sup>) = ith training example\
-\
-Housing Prices example\
-Training set\
-&nbsp; 1 Size in feet^2 (x)\
-&nbsp; 2 Price ($) in 1000's (y)\
-\
-Training set -(feed)-> Learning algorithm -> hypothesis(h)\
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (size of house(x) -> h -> estimated price(y))\
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; => h maps from x's to y's\
-\
-How do we represent h?\
-h<sub>Θ</sub>(x) = h(x) = Θ<sub>0</sub> + Θ<sub>1</sub>x\
-=> predicting a straight line function\
-=> Linear regression with one variable\
-&nbsp; = Univariate linear regression\
-
-
-
-
-
+My answer: 2, 3 (correct)
