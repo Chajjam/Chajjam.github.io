@@ -3,27 +3,27 @@ title: "ML Week 1 Introduction"
 date: 2021-06-20
 categories: Machine_Learning
 ---
-
+<pre>
 **1.1 What is Machine learning**
-: field of study that gives computers the ability to learn without being explicitly programmed
-: a computer program is said to learn from experience E with respect to some task T and some
+: field of study that gives computers the ability to learn without being explicitly programmed\
+: a computer program is said to learn from experience E with respect to some task T and some\
   performance measure P, if its performance on T, as measured by P improves with experience E.
 
-Using the second definition,
-Suppose your email program watches your checking spams, and learns based on that to better filter spam.
-What is the task T in this setting?
-
-My answer: Watching you label emails as spam or not spam (correct)
-
-2 Machine learning algorithms: supervised learning, unsupervised learning
-                               (reinforcement learning, recommender systems...)
-                               
-                               
-**1.2 Supervised Learning**
-
-Housing price prediction example
-=> supervised learning: "right answers" are given
-=> Regression: predict real-valued output (here, price)
+Using the second definition,\
+Suppose your email program watches your checking spams, and learns based on that to better filter spam.\
+What is the task T in this setting?\
+\
+My answer: Watching you label emails as spam or not spam (correct)\
+\
+2 Machine learning algorithms: supervised learning, unsupervised learning\
+                               (reinforcement learning, recommender systems...)\
+\
+\
+**1.2 Supervised Learning**\
+\
+Housing price prediction example\
+=> supervised learning: "right answers" are given\
+=> Regression: predict real-valued output (here, price)\
 
 Breast cancer example
 => Classification: discrete valued output (0 or 1, or even more classes) (here, malignant or not)
@@ -81,7 +81,7 @@ Training set -(feed)-> Learning algorith -> hypothesis(h)
                                             => predicting a straight line functin
                                             => Linear regression with one variable
                                                 = Univariate linear regression
-
+</pre>
 
 
 
