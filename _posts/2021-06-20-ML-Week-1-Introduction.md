@@ -3,7 +3,6 @@ title: "ML Week 1 Introduction"
 date: 2021-06-20
 categories: Machine_Learning
 ---
-<pre>
 **1.1 What is Machine learning**
 : field of study that gives computers the ability to learn without being explicitly programmed\
 : a computer program is said to learn from experience E with respect to some task T and some\
@@ -81,7 +80,6 @@ Training set -(feed)-> Learning algorith -> hypothesis(h)
                                             => predicting a straight line functin
                                             => Linear regression with one variable
                                                 = Univariate linear regression
-</pre>
 
 
 
