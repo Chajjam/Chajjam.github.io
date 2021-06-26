@@ -3,10 +3,10 @@ title: "ML Week 1 Introduction"
 date: 2021-06-20
 categories: Machine_Learning
 ---
-**1.1 What is Machine learning**
+**1.1 What is Machine learning**\
 : field of study that gives computers the ability to learn without being explicitly programmed\
 : a computer program is said to learn from experience E with respect to some task T and some\
-  performance measure P, if its performance on T, as measured by P improves with experience E.
+$nbsp; $nbsp; performance measure P, if its performance on T, as measured by P improves with experience E.
 
 Using the second definition,\
 Suppose your email program watches your checking spams, and learns based on that to better filter spam.\
