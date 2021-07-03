@@ -3,7 +3,7 @@ title: "ML Week 1 Introduction"
 date: 2021-06-20
 categories: Machine_Learning
 ---
-**1.1 What is Machine learning**
+**1.1 What is Machine learning**\
 \
 : field of study that gives computers the ability to learn without being explicitly programmed
 \
