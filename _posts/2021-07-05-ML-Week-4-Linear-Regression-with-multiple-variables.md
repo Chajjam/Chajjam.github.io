@@ -57,7 +57,13 @@ Mean normalization\
 &nbsp; &nbsp; &nbsp; &nbsp; x2 = (#bedrooms-2)/5 (when avg size is 2)\
 &nbsp; &nbsp; &nbsp; &nbsp; -0.5≤x<sub>1</sub>≤0.5, -0.5≤x<sub>2</sub>≤0.5\
 &nbsp; &nbsp; &nbsp; &nbsp; more generally, (x<sub>1</sub>-μ<sub>1</sub>)/s<sub>1</sub>\
-&nbsp; &nbsp; &nbsp; &nbsp; μ: avg value of x in training set
+&nbsp; &nbsp; &nbsp; &nbsp; μ: avg value of x in training set\
 &nbsp; &nbsp; &nbsp; &nbsp; s: range(max-min) (or standard deviation if *standardization*)\
 \
-
+\
+**4.4 Learning Rate**\
+\
+Debugging: How to make sure gradient descent is working correctly\
+\
+How to choose learning rate α?\
+=> Plot as (No. of iterations - x axis) and (J(Θ) - y axis)\
