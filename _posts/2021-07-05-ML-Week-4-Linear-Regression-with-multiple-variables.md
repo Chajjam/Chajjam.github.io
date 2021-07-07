@@ -31,6 +31,7 @@ Gradient Descent:\
 New algorithm (n ≥ 1):\
 &nbsp; Repeat {\
 &nbsp; &nbsp; &nbsp; Θ<sub>j</sub> := Θ<sub>j</sub> - α(1/m)∑<sup>m</sup><sub>i=1</sub>(h<sub>Θ</sub>(x<sup>(i)</sup>)-y<sup>(i)</sup>)x<sub>j</sub><sup>(i)</sup> (simultaneously update Θ<sub>j</sub> for j = 0, ..., n)\
+&nbsp; }\
 \
 \
 **4.3 Gradient in Practical Feature Scaling**\
