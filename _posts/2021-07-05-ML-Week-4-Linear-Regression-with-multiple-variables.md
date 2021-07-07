@@ -89,9 +89,9 @@ Normal equation finds Θ where J(Θ) is a local minimum\
 &nbsp; Θ = (X<sup>T</sup>X)<sup>-1</sup>X<sup>T</sup>y\
 \
 Gradient Descent vs Normal Equation\
-- Choosing α: GD needs to choose, NE needs not
-- Iterations: GD needs many iterations, NE needs not
-- Large n: GD works well with large n, NE is slow with large n ((X<sup>T</sup>X)<sup>-1</sup> => O(n<sup>3</sup>)\
+&nbsp;- Choosing α: GD needs to choose, NE needs not\
+&nbsp;- Iterations: GD needs many iterations, NE needs not\
+&nbsp;- Large n: GD works well with large n, NE is slow with large n ((X<sup>T</sup>X)<sup>-1</sup> => O(n<sup>3</sup>)\
 \
 \
 **4.7 Normal Equation Non Invertibility**\
