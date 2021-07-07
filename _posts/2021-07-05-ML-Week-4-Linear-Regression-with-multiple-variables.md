@@ -67,3 +67,38 @@ Debugging: How to make sure gradient descent is working correctly\
 \
 How to choose learning rate α?\
 => Plot as (No. of iterations - x axis) and (J(Θ) - y axis)\
+=> If α is appropriate, J(Θ) must decresase on every iteration\
+=> However, if α is too small, gradient descent can be slow to converge\
+=> If α is too large, J(Θ) may not decrease or may not/slowly converge\
++) Declare convergence if J(Θ) decreases by less than 10<sup>-3</sup> in one iteration\
++) To choose α, try 0.001 -> 0.003 -> 0.01 -> 0.03 -> 0.1 ... (approx. x3)\
+\
+\
+**4.5 Features and Polynomial Regresssion**\
+\
+Housing prices prediction example:\
+&nbsp; h<sub>Θ</sub>(x) = Θ<sub>0</sub> + Θ<sub>1</sub> * frontage + Θ<sub>w</sub> * depth\
+We can create a new feature "Area"
+&nbsp; X = frontage * depth\
+&nbsp; h<sub>Θ</sub>(x) = Θ<sub>0</sub> + Θ<sub>1</sub> * X\
+\
+\
+**4.6 Normal Equation**\
+\
+Normal equation finds Θ where J(Θ) is a local minimum\
+&nbsp; Θ = (X<sup>T</sup>X)<sup>-1</sup>X<sup>T</sup>y\
+\
+Gradient Descent vs Normal Equation\
+- Choosing α: GD needs to choose, NE needs not\
+- Iterations: GD needs many iterations, NE needs not\
+- Large n: GD works well with large n, NE is slow with large n ((X<sup>T</sup>X)<sup>-1</sup> => O(n<sup>3</sup>)\
+\
+\
+**4.7 Normal Equation Non Invertibility**\
+\
+Θ = (X<sup>T</sup>X)<sup>-1</sup>X<sup>T</sup>y\
+- What if X<sup>T</sup>X is non-invertible(singular/degenerate)?\
+&nbsp; this happens rarely, but there are some possible causes:\
+&nbsp; - Redundant features (linearly dependent)\
+&nbsp; - Too many features (m ≤ n)\
+&nbsp; => delete some features or use regularization
