@@ -129,4 +129,22 @@ w =
 >> randn(1,3)
 
 % hist: construct histogram
-hist(w)
+>> hist(w)
+>> hist(w,50) % histogram with 50 bars
+
+% eye: identity matrix
+>> I = eye(3)
+I =
+    1   0   0
+    0   1   0
+    0   0   1
+
+% help: documentation for functions
+>> help rand
+```
+\
+\
+**5.2 Moving Data Around**
+```Octave
+A = [1 2; 3 4; 5 6;]
+
