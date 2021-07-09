@@ -393,7 +393,6 @@ J = 1/(2*m) * sum(sqrErrors);
 \
 **5.6 Vectorization**
 ```Ocatve
-
 % Unvectorized implementation
 prediction = 0.0
 for j = 1:n+1,
@@ -402,6 +401,4 @@ end;
 
 % Vectorized implementation
 prediction = theta` * x;  % much more efficient, simpler
-
 ```
-
