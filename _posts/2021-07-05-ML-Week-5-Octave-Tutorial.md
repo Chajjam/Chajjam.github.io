@@ -232,7 +232,7 @@ A =
 ```
 \
 \
-**Computing on Data**
+**5.3 Computing on Data**
 ```Octave
 >> A = [1 2; 3 4; 5 6];
 >> B = [11 12; 13 14; 15 16];
@@ -278,7 +278,7 @@ c =
 ```
 \
 \
-**Plotting Data**
+**5.4 Plotting Data**
 ```Octave
 >> plot(a,b);       % shows the graph using a as x axis and b as y axis
 >> hold on;
@@ -294,7 +294,114 @@ c =
 >> figure(2); plot(t,y2); % plot another figure
 >> subplot(1,2,1);  % divides plot into a 1x2 grid and ready to set first plot
 >> axis([0.5 1 -1 1]) % set x axis range 0.5-1.0 / y axis range -1.0-1.0
->> clf;
+>> clf;         % erases the contents in current screen
+>> imagesc(A)   % shows A as colored grid
+>> imagesc(A), colorbar, colormap gray;
+    % colorbar: shows a bar that matches number and color
+    % colormap gray: display as black and white
+>> a=1, b=2, c=3    % 3 commands in one line
+>> a=1; b=2; c=3;   % equivalent but no output
+```
+\
+\
+**5.5 While If Statements and Functions**
+```Octave
+% For loop
+>> for i=1:10,  % indentation doesn't matter
+>    v(i) = 2^i;
+>  end;
 
+>> indices=1:10;
+>> for i=indices,   % also possible
+>    disp(i);
+>  end;
 
-  
+% While
+>> i = 1;
+>> while i <= 5;
+>     v(i) = 100;
+>     i = i+1;
+>  end;
+>> v
+
+>> i=1;
+>> while true,
+>     v(i) = 999;
+>     i = i+1;
+>     if i == 6,
+>       break;
+>     end;
+>  end;
+
+% if else
+>> if v(1) == 1,
+>     disp('The value is one');
+>  elseif v(1) == 2,
+>     disp('The value is two');
+>  else
+>     disp('The value is not one or two.');
+>  end;
+
+% defining functions
+
+% File "squareThisNumber.m"
+function y = squareThisNumber(x)
+y = x^2;
+
+>> squareThisNumber(5)
+ans = 25
+
+% search path
+>> addpath('C:\Users...') % where sqaureThisNumber.m is located
+>> cd 'C:\'               % another directory
+>> squareThisNumber(5)    % still works!
+
+% two return values
+
+% squareAndCubeThisNumber.m
+function [y1,y2] = squareAndCubeThisNumber(x)
+y1 = x^2;
+y2 = x^3;
+
+>> [a,b] = squareAndCubeThisNumber(5)
+a = 25
+b = 125
+
+% Goal: Define a function to compute the cost function J(Θ)
+>> X = [1 1; 1 2; 1 3]
+X =
+  1   1
+  1   2
+  1   3
+
+>> y = [1; 2; 3]
+y =
+  1
+  2
+  3
+
+% costFunctionJ.m
+function J = costFunctionJ(X, y, theta)
+m = size(X,1);          % number of training examples
+predictions = X*theta;  % predictions of hypothesis on all m examples
+sqrErrors = (predictions-y).^2;   % squared errors
+J = 1/(2*m) * sum(sqrErrors);
+
+>> j = costFunctionJ(X, y theta)
+```
+\
+\
+**5.6 Vectorization**
+```Ocatve
+
+% Unvectorized implementation
+prediction = 0.0
+for j = 1:n+1,
+  prediction = prediction + theta(j) * x(j)
+end;
+
+% Vectorized implementation
+prediction = theta` * x;  % much more efficient, simpler
+
+```
+
