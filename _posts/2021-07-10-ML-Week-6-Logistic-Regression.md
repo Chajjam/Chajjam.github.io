@@ -26,7 +26,7 @@ Logistic Regression: always 0≤h<sub>Θ</sub>(x)≤1\
 \
 \
 **6.2 Hypothesis Representation**\
-h<sub>Θ</sub>(x) = g(<sup>T</sup>x)\
+h<sub>Θ</sub>(x) = g(Θ<sup>T</sup>x)\
 where g(z) = 1/(1+e<sup>-z</sup>): sigmoid(or logistic) function\
 \
 Interpretation of Hypothesis Output\
@@ -59,11 +59,44 @@ Combining two cost functions:\
 &nbsp; (derives from maximum likelihood estimation, and is convex)\
 \
 To minimize the cost function, use gradient descent\
-Repeat {
+Repeat {\
 &nbsp; Θ<sub>j</sub> := Θ<sub>j</sub> - α∑<sup>m</sup><sub>i=1</sub>(h<sub>Θ</sub>(x<sup>(i)</sup>)-y<sup>(i)</sup>)x<sub>j</sub><sup>(i)</sup>\
 }\
 \
 When updating parameters, it is better to use *vectorized implementation* rather than for loop.\
-Vectorized implementation updates parameters at the same time.
+Vectorized implementation updates parameters at the same time.\
+\
+\
+**6.6 Advanced Optimization**\
+Optimization algorithms other than gradient descent:\
+&nbsp; - Conjugate gradient\
+&nbsp; - BFGS\
+&nbsp; - L-BFGS\
+&nbsp; => Advantages\
+&nbsp; &nbsp; - no need to manually pick α\
+&nbsp; &nbsp; - often faster than gradient descent\
+&nbsp; => Disadvantages:\
+&nbsp; &nbsp; - more complex\
+\
+```Octave
+options = optimset('GradObj', 'on', 'MaxIter', '100);
+initialTheta = zeros(2,1);
+  [optTheta, functionVal, exitFlag] ...
+      = fminunc(@costFunction, initialTheta, options);
+
+function [jVal gradient] = costFunction(theta)
+    jVal = [% code to compute J(Θ)];
+    gradient(1) = [% code to compute 1st derivative term];
+    .
+    .
+    .
+    gradient(n+1)
+```
+\
+\
+**6.7 Multiclass Classification: One-vs-all**\
+One-vs-all(one-vs-rest):\
+&nbsp; - Train a logistic regression classifier for each class i to predict the probability that y=i\
+&nbsp; - On a new input x to make a prediction, pick the class i that maximizes h
 
 
