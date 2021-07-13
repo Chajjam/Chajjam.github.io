@@ -76,7 +76,7 @@ Optimization algorithms other than gradient descent:\
 &nbsp; &nbsp; - no need to manually pick α\
 &nbsp; &nbsp; - often faster than gradient descent\
 &nbsp; => Disadvantages:\
-&nbsp; &nbsp; - more complex\
+&nbsp; &nbsp; - more complex
 ```Octave
 options = optimset('GradObj', 'on', 'MaxIter', '100);
 initialTheta = zeros(2,1);
