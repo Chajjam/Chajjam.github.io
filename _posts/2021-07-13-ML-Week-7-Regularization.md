@@ -57,8 +57,7 @@ If λ>0, it is proved that the matrix inside the parentheses is always invertibl
 **7.4 Regularized Logistic Regression**\
 Cost function for logistic regression:\
 original J(Θ) + (λ/2m)∑<sup>n</sup><sub>j=1</sub>Θ<sub>j</sub><sup>2</sup>\
-Same modification for gradient descent\
-\
+Same modification for gradient descent
 
 
 
