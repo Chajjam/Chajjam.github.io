@@ -36,8 +36,45 @@ a<sub>i</sub><sup>(j)</sup>: activation of unit i in layer j\
 &nbsp; a<sub>1</sub><sup>(2)</sup> = g(Θ<sub>10</sub><sup>(1)</sup>x<sub>0</sub> + Θ<sub>11</sub><sup>(1)</sup>x<sub>1</sub> + Θ<sub>12</sub><sup>(1)</sup>x<sub>2</sub> + Θ<sub>13</sub><sup>(1)</sup>x<sub>3</sub>)\
 &nbsp; a<sub>2</sub><sup>(2)</sup> = g(Θ<sub>20</sub><sup>(1)</sup>x<sub>0</sub> + Θ<sub>21</sub><sup>(1)</sup>x<sub>1</sub> + Θ<sub>22</sub><sup>(1)</sup>x<sub>2</sub> + Θ<sub>23</sub><sup>(1)</sup>x<sub>3</sub>)\
 &nbsp; a<sub>3</sub><sup>(2)</sup> = g(Θ<sub>30</sub><sup>(1)</sup>x<sub>0</sub> + Θ<sub>31</sub><sup>(1)</sup>x<sub>1</sub> + Θ<sub>32</sub><sup>(1)</sup>x<sub>2</sub> + Θ<sub>33</sub><sup>(1)</sup>x<sub>3</sub>)\
-&nbsp; h<sub>Θ</sub>(x) = a<sub>1</sub><sup>(3)</sup> = g(Θ<sub>10</sub><sup>(2)</sup>a<sub>0</sub><sup>(2)</sup> + Θ<sub>11</sub><sup>(2)</sup>a<sub>1</sub><sup>(2)</sup> + Θ<sub>13</sub><sup>(2)</sup>a<sub>3</sub><sup>(2)</sup>)
+&nbsp; h<sub>Θ</sub>(x) = a<sub>1</sub><sup>(3)</sup> = g(Θ<sub>10</sub><sup>(2)</sup>a<sub>0</sub><sup>(2)</sup> + Θ<sub>11</sub><sup>(2)</sup>a<sub>1</sub><sup>(2)</sup> + Θ<sub>13</sub><sup>(2)</sup>a<sub>3</sub><sup>(2)</sup>)\
 \
 Θ<sup>(1)</sup> ∈ R<sup>3x4</sup>\
 If network has s<sub>j</sub> units in layer j, s<sub>j+1</sub> units in layer j+1, then Θ<sup>(j)</sup> will be of dimension s<sub>j+1</sub>x(s<sub>j</sub>+1)\
+\
+\
+**8.4 Model Representation II**\
+Forward propagation: input -> hidden -> activation\
+a<sub>1</sub><sup>(2)</sup> = g(Θ<sub>10</sub><sup>(1)</sup>x<sub>0</sub> + Θ<sub>11</sub><sup>(1)</sup>x<sub>1</sub> + Θ<sub>12</sub><sup>(1)</sup>x<sub>2</sub> + Θ<sub>13</sub><sup>(1)</sup>x<sub>3</sub>)\
+a<sub>2</sub><sup>(2)</sup> = g(Θ<sub>20</sub><sup>(1)</sup>x<sub>0</sub> + Θ<sub>21</sub><sup>(1)</sup>x<sub>1</sub> + Θ<sub>22</sub><sup>(1)</sup>x<sub>2</sub> + Θ<sub>23</sub><sup>(1)</sup>x<sub>3</sub>)\
+a<sub>3</sub><sup>(2)</sup> = g(Θ<sub>30</sub><sup>(1)</sup>x<sub>0</sub> + Θ<sub>31</sub><sup>(1)</sup>x<sub>1</sub> + Θ<sub>32</sub><sup>(1)</sup>x<sub>2</sub> + Θ<sub>33</sub><sup>(1)</sup>x<sub>3</sub>)\
+h<sub>Θ</sub>(x) = a<sub>1</sub><sup>(3)</sup> = g(Θ<sub>10</sub><sup>(2)</sup>a<sub>0</sub><sup>(2)</sup> + Θ<sub>11</sub><sup>(2)</sup>a<sub>1</sub><sup>(2)</sup> + Θ<sub>13</sub><sup>(2)</sup>a<sub>3</sub><sup>(2)</sup>)\
+\
+z<sup>(2)</sup> = Θ<sup>(1)</sup> = a<sup>(1)</sup>\
+a<sup>(2)</sup> = g(z<sup>(2)</sup>)\
+z<sup>(3)</sup> = Θ<sup>(2)</sup>a<sup>(2)</sup>\
+h<sub>Θ</sub>(x) = a<sup>(3)</sup> = g(z<sup>(3)</sup>)\
+\
+The model is not constrained with the inputs x1, x2, x3, but it develops its own inputs a<sub>1</sub><sup>(2)</sup>, a<sub>2</sub><sup>(2)</sup>, a<sub>3</sub><sup>(2)</sup>\
+\
+Architecture: how the neurons are connected each other\
+\
+\
+**8.5 Examples and Intuitions I**\
+Simple example: AND\
+x1,x2 ∈ {0,1}\
+y = x1 AND x2\
+\
++1\
+x1   O   h<sub>Θ</sub>(x)\
+x2\
+=> h<sub>Θ</sub>(x) = g(-30 + 20x1 + 20x2)\
+note that: g(-4.6) = 0.01, g(4.6) = 0.99\
+x1   x2   h<sub>Θ</sub>(x)\
+0    0     0\
+0    1     0\
+1    0     0\
+1    1     1\
+\
+\
+**8.6 Examples and Intuitions II**\
 
