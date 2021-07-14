@@ -77,4 +77,32 @@ x1   x2   h<sub>Θ</sub>(x)\
 \
 \
 **8.6 Examples and Intuitions II**\
+x<sub>1</sub> AND x<sub>2</sub>\
++1\
+x<sub>1</sub>   ->   O   ->   h<sub>Θ</sub>(x)\
+x<sub>2</sub>\
+\
+(NOT x<sub>1</sub>) AND (NOT x<sub>2</sub>)\
++1\
+x<sub>1</sub>   ->   O   -> h<sub>Θ</sub>(x)\
+x<sub>2</sub>\
+\
+x<sub>1</sub> OR x<sub>2</sub>\
++1\
+x<sub>1</sub>   ->   O   ->   h<sub>Θ</sub>(x)\
+x<sub>2</sub>\
+\
+Putting it together: x<sub>1</sub> XNOR x<sub>2</sub> = NOT(x<sub>1</sub> OR x<sub>2</sub>)\
++1&nbsp; &nbsp; a<sub>1</sub><sup>(2)</sup>\
+x<sub>1</sub>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a<sub>1</sub><sup>(3)</sup>   ->   h<sub>Θ</sub>(x)\
+x<sub>2</sub>&nbsp; &nbsp; a<sub>2</sub><sup>(2)</sup>\
+\
+\
+**8.7 Multiclass Classification**\
+One-vs-all\
+Pedestrian - Car - Motorcycle - Truck\
+h<sub>Θ</sub>(x) ∈ R<sup>4</sup> ( 4 logistic classifiers )\
+Training set: (x<sup>(1)</sup>, y<sup>(1)</sup>) ...
+
+
 
