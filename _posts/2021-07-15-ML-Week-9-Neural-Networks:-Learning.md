@@ -84,5 +84,37 @@ Implementation Note:\
 \
 Important:\
 &nbsp;- Be sure to disable gradient checking code before training classifier. If you run numerical gradient computation on every itertion, your code will be very slow.\
+\
+\
+**9.6 Random Initialization**\
+For gradient descent and advanced optimization method, we need initial value for Θ.
+```Octave
+optTheta = fminunc(@costFunction, initialTheta, options)
+```
+Consider gradient descent\
+Zero initialization
+```Octave
+% if we set initial Θ = 0
+initialTheta = zeros(n,1)
+```
+After each update, parameters corresponding to inputs going into each of two hidden units are identical.\
+=> a<sub>1</sub><sup>(2)</sup> = a<sub>2</sub><sup>(2)</sup>\
+\
+Random initialization: Symmetry breaking\
+=> initialize each Θ<sub>ij</sub><sup>(l)</sup> to a random value in [-ε,ε]
+```Octave
+Theta1 = rand(10,11)*(2*INIT_EPSILON) - INIT_EPSILON;
+Theta2 = rand(1,11)*(2*INIT_EPSILON) - INIT_EPSILON;
+```
+\
+\
+**9.7 Putting it Together**\
+\
+Training a neural network: pick a network architecture\
+&nbsp;- No. of input units: dimension of features x<sup>(i)</sup>\
+&nbsp;- No. of output units: Number of classes\
+\
+
+
 
 
