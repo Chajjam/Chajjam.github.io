@@ -33,8 +33,8 @@ Model selection\
 d = degree of polynomial\
 Among several different degrees of polynomial, we can choose the least error one.\
 Then, how well does the model generalize?
-Measuring error J<sub>test</test>(Θ<sup>(5)</sup>)\
-Problem: J<sub>test</test>(Θ<sup>(5)</sup>) is likely to be an optimistic estimate of generalization error. \
+Measuring error J<sub>test</sub>(Θ<sup>(5)</sup>)\
+Problem: J<sub>test</sub>(Θ<sup>(5)</sup>) is likely to be an optimistic estimate of generalization error. \
 => split into [60% training set], [20% cross validation set (CV)], [20% test set]\
 => test hypothesis from test set to cross validation set\
 \
