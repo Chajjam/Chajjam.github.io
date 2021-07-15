@@ -110,10 +110,22 @@ Theta2 = rand(1,11)*(2*INIT_EPSILON) - INIT_EPSILON;
 \
 **9.7 Putting it Together**\
 \
-Training a neural network: pick a network architecture\
+Pick a network architecture\
 &nbsp;- No. of input units: dimension of features x<sup>(i)</sup>\
 &nbsp;- No. of output units: Number of classes\
+&nbsp;- Resonable default: 1 hidden layer, or if>1 hidden layer, have same no. of hidden units in every layer (usually the more the better)\
 \
+Train a neural network\
+&nbsp;1. Randomly initialize weights\
+&nbsp;2. Implement forward propagation to get h<sub>Θ</sub>(x<sup>(i)</sup>) for any x<sup>(i)</sup>\
+&nbsp;3. Implement code to compute cost function J(Θ)\
+&nbsp;4. Implement backprop to compute partial derivatives (∂/∂Θ<sub>jk</sub><sup>(l)</sup>)J(Θ)\
+&nbsp; => for i = 1:m (for/back prop using examples and get activations)\
+&nbsp;5. Gradient checking, then disable gradient checking code\
+&nbsp;6. Gradient descent or advanced optimization method with backpropagation to try to minimize J(Θ) as a function of parameters Θ
+
+
+
 
 
 
