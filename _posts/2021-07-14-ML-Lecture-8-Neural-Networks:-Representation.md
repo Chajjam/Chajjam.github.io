@@ -1,5 +1,5 @@
 ---
-title: "ML Week 8 Neural Networks: Representation"
+title: "ML Lecture 8 Neural Networks: Representation"
 date: 2021-07-14
 categories: Neural_Networks
 ---
