@@ -1,5 +1,5 @@
 ---
-title: "ML Week 1 Introduction"
+title: "ML Lecture 1 Introduction"
 date: 2021-06-20
 categories: Machine_Learning
 ---
