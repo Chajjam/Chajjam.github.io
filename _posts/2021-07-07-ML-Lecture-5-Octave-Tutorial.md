@@ -1,5 +1,5 @@
 ---
-title: "ML Week 5 Octave Tutorial"
+title: "ML Lecture 5 Octave Tutorial"
 date: 2021-07-07
 categories: "Octave"
 ---
