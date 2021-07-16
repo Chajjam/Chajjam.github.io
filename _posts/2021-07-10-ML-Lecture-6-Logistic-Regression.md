@@ -1,5 +1,5 @@
 ---
-title: "ML Week 6 Logistic Regression"
+title: "ML Lecture 6 Logistic Regression"
 date: 2021-07-10
 categories: Logistic_Regression
 ---
