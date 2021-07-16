@@ -1,5 +1,5 @@
 ---
-title: "ML Week 11 Machine Learning System Design"\
+title: "ML Lecture 11 Machine Learning System Design"\
 date: 2021-07-16
 categories: Machine_Learning
 ---
