@@ -1,5 +1,5 @@
 ---
-title: ML Week 9 Neural Networks: Learning
+title: ML Lecture 9 Neural Networks: Learning
 date: 2021-07-15
 categories: Neural_Networks
 ---
