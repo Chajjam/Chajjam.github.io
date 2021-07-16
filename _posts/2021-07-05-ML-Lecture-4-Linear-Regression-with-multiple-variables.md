@@ -1,5 +1,5 @@
 ---
-title: "ML Week 4 Linear Regression with multiple variables"
+title: "ML Lecture 4 Linear Regression with multiple variables"
 date: 2021-07-05
 categories: Linear_Regression
 ---
