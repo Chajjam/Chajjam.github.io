@@ -1,5 +1,5 @@
 ---
-title: "ML Week 2 Linear Regression"
+title: "ML Lecture 2 Linear Regression"
 date: 2021-06-26
 categories: Linear_Regression
 ---
