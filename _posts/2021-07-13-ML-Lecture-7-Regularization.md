@@ -1,5 +1,5 @@
 ---
-title: "ML Week 7 Regularization"
+title: "ML Lecture 7 Regularization"
 date: 2021-07-13
 categories: Regularization
 ---
