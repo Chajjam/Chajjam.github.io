@@ -77,6 +77,45 @@ g'(z) = 0.01 if z<0, 1 if z>0\
 \
 \
 **3.9 Gradient Descent for Neural Networks**\
+n<sub>x</sub> = n<sup>[0]</sup> (input), n<sup>[1]</sup> (hidden unit), n<sup>[2]</sup> = 1 (output)\
+\
+Parameters:\
+w<sup>[1]</sup>: (n<sup>[1]</sup>, <sup>[1]</sup>)\
+b<sup>[1]</sup>: (n<sup>[0]</sup>, 1)\
+w<sup>[2]</sup>: (n<sup>[2]</sup>, n<sup>[1]</sup>)\
+b<sup>[2]</sup>: (n<sup>[1]</sup>, 1)\
+\
+Cost function: (1/m) ∑ L(y^,y)\
+\
+Randomly initialize parameters and perform gradient descent\
+Repeat:\
+Compute predicts (y^<sup>(i)</sup>)\
+dw<sup>[1]</sup> = dJ/dw<sup>[1]</sup>, db<sup>[1]</sup> = dJ/db<sup>[1]</sup>\
+w<sup>[1]</sup> = <sup>[1]</sup> - αdw<sup>[1]</sup>\
+b<sup>[1]</sup> = <sup>[1]</sup> - αdb<sup>[1]</sup>\
+\
+Forward propagation:\
+Z<sup>[1]</sup> = w<sup>[1]</sup>x + b<sup>[1]</sup>\
+A<sup>[1]</sup> = g<sup>[1]</sup>(z<sup>[1]</sup>)\
+z<sup>[2]</sup> = w<sup>[2]</sup>A<sup>[1]</sup> + b<sup>[2]</sup>\
+A<sup>[2]</sup> = g<sup>[2]</sup>(z<sup>[2]</sup>)\
+\
+Backpropagation:\
+dz<sup>[2]</sup> = A<sup>[2]</sup> - Y\
+dw<sup>[2]</sup> = (1/m)dz<sup>[1]</sup>A<sup>[1]T</sup>\
+db<sup>[2]</sup> = (1/m) * np.sum(dz<sup>[2]</sup>, axis=1, keepdims=True)\
+dz<sup>[1]</sup> = w<sup>[2]T</sup>dz<sup>[2]</sup> * g<sup>[1]</sup>'(z<sup>[1]</sup>)\
+dw<sup>[1]</sup> = (1/m)dz<sup>[1]</sup>X<sup>T</sup>\
+db<sup>[1]</sup> = (1/m)np.sum(dz<sup>[1]</sup>, axis=1, keepdims=True)\
+\
+\
+**3.10 Backpropagation Intuition**\
+\
+\
+**3.11 Random Initialization**\
+zero initialization is not a good choice because hidden units become identical (symmetric)\
+W<sup>[1]</sup> = np.random.randn((2,2)) * 0.01 (we usually prefer small values because large weights will mess up sigmoid/tanh)\
+b<sup>[1]</sup> = np.zeros((2,1)) (b doesn't matter)
 
 
 
