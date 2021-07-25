@@ -87,10 +87,37 @@ Why normalize inputs?: because inputs may range very differently\
 \
 \
 **5.10 Vanishing/Exploding Gradients**\
-
-
-
-
-
-
-
+For very deep neural network, the value of y^ might vanish/explode\
+=> partial solution: careful initialization of weights\
+\
+\
+**5.11 Weight Initialization for Deep Networks**\
+```Python
+WL = np.random.randn(X.shape) * np.sqrt(2/n[L-1])   # good for relu
+WL = np.random.randn(X.shape) * np.sqrt(1/n[L-1])   # good for tanh: Xavier initialization
+sqrt(2/(n[l-1] + n[l]))   # another choice
+```
+\
+\
+**5.12 Numerical Approximation of Gradients**\
+(f(Θ+ε) - f(Θ+ε))/2ε ≒ derivative\
+\
+\
+**5.13 Gradient Checking**
+Take parameters and reshape them into a big vector Θ.\
+Take derivative parameters and reshape them into a big vector dΘ.\
+```Python
+for each i:
+  dΘ_approx[i] = (J(Θ_1, ..., Θ_i+ε, ...) - J(Θ_1, ..., Θ_i-ε, ...)) / 2ε
+# Check
+||dΘ_approx - dΘ|| / (||d_approx|| + ||dΘ||)
+# if this is similar to 10^-7 or whatever, it is less iikely there is bug
+```
+\
+\
+**5.14 Gradient Checking Implementation Notes**\
+&nbsp;- Don't use gradient checking in training - only to debug\
+&nbsp;- If algorithm fails grad check, look at components to try to identify bug\
+&nbsp;- Remember regularization\
+&nbsp;- Does not work with dropout\
+&nbsp;- Run at random initialization; perhaps again after some training
