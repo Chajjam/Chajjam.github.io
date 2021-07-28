@@ -120,16 +120,16 @@ Server\
 \
 Embedded computers\
 : a computer inside another device and used for running a single or a collection of software\
-\ 
+\
 Personal mobile device (PMD)\
 : small, wireless devices to connect to the Internet (ex: smart phones, tablets)\
-\  
+\
 Cloud Computing\
 : larger collections of servers that provide services over the Internet. Relies on giant datacenters known as Warehouse Scale Copmuters (WSCs)\
 \
 Software as a service (SaaS)\
 : delivers software and data as a service over the Internet (ex: web search, social networking)\
-\ 
+\
 Systems Software\
 : Software that provides services that are commonly useful like operating systems, compilers, loaders, assemblers...\
 \
@@ -162,7 +162,7 @@ Liquid Crystal Displays (LCDs)\
 \
 Active Matrix Display\
 : A liquid crystal display using a transistor to control the transmission of light at each individual pixel\
-\  
+\
 Pixel\
 : The smallest individual picture element\
 \
@@ -180,8 +180,6 @@ Memory\
 \
 Dynamic Random Access Memory (DRAM)\
 : Memory built as an integrated circuit; it provides random access to any location.\
-\
-
 
 
 
