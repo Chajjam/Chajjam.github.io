@@ -1,110 +1,110 @@
 ---
 title: "Computer Architecture Day 1"
-date: 2021-06-19 -0400
+date: 2021-06-19
 categories: computer_architecture
 ---
-
-Reference : Computer Organization and Design 5th edition
-
-**$ Chapter 1 Computer Abstractions and Technology $**
-
-
-**1.1 Introduction**
-
-3 different classes of copmuting applications:
-- Personal computers (PCs) ---> Personal mobile device (PMD)
-- Servers                  ---> Cloud computing
-- Embedded computers
-
-
-**1.2 Eight Great Ideas in Computer Architecture**
-
-1) Design for Moore's Law (Graph)
-  Moore's Law : integrated circuit resources double every 18-24 months
-  Computer architects must anticipate where the technology will be when the design finshes, not when it starts
-  
-2) Use Abstraction to Simply Design (Picasso)
-  Use abstractions to represent the design effectively
-  
-3) Make the Common Case Fast (Car)
-  Enhance performance better than optimizing the rare case, and is also simpler
-
-4) Performance via Parallism (Airplane)
-  Designs that get more performance by performing operations in parallel
-  
-5) Performance via Pipelining (Pipe)
-  Pipelining : a particular pattern of parallelism
-
-6) Performance via Prediction (Crystall Ball)
-  Sometimes it is faster if recoverable and relatively accurate
-  
-7) Hierarchy of Memories (Pyramid)
-
-8) Dependability via Redundancy (Truck)
-  Make systems dependable by including redundant components that can take over when a failure occurs and to help detect failures
-
-
-**1.3 Below Your Program**
-
-Hierarchy of software : (Lowest) Hardware -> Systems Software -> Applications Software
-
-Two important types of systems software : Operating System & Compiler
-- OS : interfaces between a user's program and hardware.
-       Provide many services and supervisory functions
-       Important funcionts:
-        - Handling basic input and output operations
-        - Allocating storage and memory
-        - Providing for protected sharing of the computer among multiple applications using it simultaneously
-- Compilers : translate a program written in high-level languages into instructions that hardware can execute
-
-- The easiest signals for computers are on and off: 0 and 1 => binary numbers
-- Instructions are collections of bits that our computer understands and obeys
-  ex) 1000110010100000 tells a computer to add two numbers
-- first used binary numbers (tedious)
-  => invented noations and translated them to binary by hand (less, but still tedious)
-  => invented a program to translate symbolic notation to binary; i.e. assember!
-     ex) the programmer writes    :   add A,B           (assembly language)
-         the assember translates  :   1000110010100000  (machine language)
-  => now high-level prgramming languages and compilers : instructions to instructions
-     ex) A + B -> add A,B -> 1000110010100000
-     benefits:
-      - programmers can think in a more natural language
-      - languages can be designed according to their intended use
-        ex) Fortran for scientific computation, Cobol for business data processing, Lisp for symbol manipulation
-      - improved programmer productivity
-      - allows programs to be independent of the computer on which they were developed
-        (because compilers and assemblers translate to the binary!)
-
-
-**1.4 Under the Covers**
-
-Basic functions of the hardware: inputting, outputting, processing, storing data
-5 key components of a computer that performs the basic functions:
-1) input
-2) output
-3) memory
-4) datapath (called the processor with control)
-5) control  (called the processor with datapath)
-
-THe most fascinating I/O device: graphics display
-Liquid crystal displays (LCDs)
-- does not produce light, but controls the transmission of light
-- rod-shaped molecules in a liquid bends light entering the display; rods straighten out when
-  a current is applied and no longer bend the light
-- LCD displays today use an active matrix for better image quality
-- the image is composed of pixels
-- 8 bits for each of the three colors, 24bits per pixel
-- bit map : matrix of bits
-
-computer hardware support for graphics : raster refresh buffer (frame buffer) 
-  - image to be represented on screen is stored in the frame buffer
-  - bit pattern per pixel is read out ot the graphics display at the refresh rate
-
-Touchscreen
-- today many use capccitive sensing
-  - people are electrical conductors
-  - if an insulator like glass is covered with a transparent conductor, touching distorts the
-    electrostatic field of the screen
+\
+Reference : Computer Organization and Design 5th edition\
+\
+**$ Chapter 1 Computer Abstractions and Technology $**\
+\
+\
+**1.1 Introduction**\
+\
+3 different classes of copmuting applications:\
+&nbsp;- Personal computers (PCs) ---> Personal mobile device (PMD)\
+&nbsp;- Servers ---> Cloud computing\
+&nbsp;- Embedded computers\
+\
+\
+**1.2 Eight Great Ideas in Computer Architecture**\
+\
+1) Design for Moore's Law (Graph)\
+Moore's Law : integrated circuit resources double every 18-24 months\
+Computer architects must anticipate where the technology will be when the design finshes, not when it starts\
+\
+2) Use Abstraction to Simply Design (Picasso)\
+Use abstractions to represent the design effectively\
+\
+3) Make the Common Case Fast (Car)\
+Enhance performance better than optimizing the rare case, and is also simpler\
+\
+4) Performance via Parallism (Airplane)\
+Designs that get more performance by performing operations in parallel\
+\
+5) Performance via Pipelining (Pipe)\
+Pipelining : a particular pattern of parallelism\
+\
+6) Performance via Prediction (Crystall Ball)\
+Sometimes it is faster if recoverable and relatively accurate\
+\
+7) Hierarchy of Memories (Pyramid)\
+\
+8) Dependability via Redundancy (Truck)\
+Make systems dependable by including redundant components that can take over when a failure occurs and to help detect failures\
+\
+\
+**1.3 Below Your Program**\
+\
+Hierarchy of software : (Lowest) Hardware -> Systems Software -> Applications Software\
+\
+Two important types of systems software : Operating System & Compiler\
+&nbsp;- OS:\
+interfaces between a user's program and hardware.\
+Provide many services and supervisory functions\
+Important functions:\
+&nbsp;- Handling basic input and output operations\
+&nbsp;- Allocating storage and memory\
+&nbsp;- Providing for protected sharing of the computer among multiple applications using it simultaneously\
+\
+&nbsp;- Compilers : translate a program written in high-level languages into instructions that hardware can execute\
+\
+&nbsp;- The easiest signals for computers are on and off: 0 and 1 => binary numbers\
+&nbsp;- Instructions are collections of bits that our computer understands and obeys\
+ex) 1000110010100000 tells a computer to add two numbers\
+&nbsp;- first used binary numbers (tedious)\
+&nbsp; &nbsp; => invented noations and translated them to binary by hand (less, but still tedious)\
+&nbsp; &nbsp; => invented a program to translate symbolic notation to binary; i.e. assember!\
+&nbsp; &nbsp; ex) the programmer writes : add A,B (assembly language)\
+&nbsp; &nbsp; &nbsp; &nbsp; the assember translates : 1000110010100000 (machine language)\
+&nbsp; &nbsp; &nbsp; &nbsp; => now high-level prgramming languages and compilers : instructions to instructions\
+&nbsp; &nbsp; &nbsp; &nbsp; ex) A + B -> add A,B -> 1000110010100000\
+&nbsp; &nbsp; &nbsp; &nbsp; benefits:\
+&nbsp; &nbsp; &nbsp; &nbsp; - programmers can think in a more natural language\
+&nbsp; &nbsp; &nbsp; &nbsp; - languages can be designed according to their intended use\
+&nbsp; &nbsp; &nbsp; &nbsp; ex) Fortran for scientific computation, Cobol for business data processing, Lisp for symbol manipulation\
+&nbsp; &nbsp; &nbsp; &nbsp; - improved programmer productivity\
+&nbsp; &nbsp; &nbsp; &nbsp; - allows programs to be independent of the computer on which they were developed\
+&nbsp; &nbsp; &nbsp; &nbsp; (because compilers and assemblers translate to the binary!)\
+\
+\
+**1.4 Under the Covers**\
+\
+Basic functions of the hardware: inputting, outputting, processing, storing data\
+5 key components of a computer that performs the basic functions:\
+1) input\
+2) output\
+3) memory\
+4) datapath (called the processor with control)\
+5) control  (called the processor with datapath)\
+\
+THe most fascinating I/O device: graphics display\
+Liquid crystal displays (LCDs)\
+&nbsp;- does not produce light, but controls the transmission of light\
+&nbsp;- rod-shaped molecules in a liquid bends light entering the display; rods straighten out when a current is applied and no longer bend the light\
+&nbsp;- LCD displays today use an active matrix for better image quality\
+&nbsp;- the image is composed of pixels\
+&nbsp;- 8 bits for each of the three colors, 24bits per pixel\
+&nbsp;- bit map : matrix of bits\
+\
+computer hardware support for graphics : raster refresh buffer (frame buffer)\
+&nbsp;- image to be represented on screen is stored in the frame buffer\
+&nbsp;- bit pattern per pixel is read out ot the graphics display at the refresh rate\
+\
+Touchscreen\
+&nbsp;- today many use capccitive sensing
+&nbsp;&nbsp;- people are electrical conductors
+&nbsp;&nbsp;- if an insulator like glass is covered with a transparent conductor, touching distorts the electrostatic field of the screen
 
 
 
