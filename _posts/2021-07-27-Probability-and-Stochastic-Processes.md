@@ -62,6 +62,21 @@ Probability & Set Notation:\
 \
 \
 **Lecture 2: The Axioms of Probability & Conditional Probability**
+P(A) ≥ 0\
+P(S) = 1\
+If AB = {∅}, then P(A∪B) = P(A) + P(B)\
+\
+If AB != {∅},\
+A∪B = A∪A<sup>-</sup>B\
+B = AB∪A<sup>-</sup>B\
+P(A∪B) = P(A) + P(A<sup>-</sup>B), P(B) = P(AB) + P(A<sup>-</sup>B)\
+P(A∪B) = P(A) + P(B) - P(AB) ≤ P(A) + P(B)\
+\
+Conditional Probability:\
+&nbsp;- The probability of event A given that event M has occured is:\
+&nbsp; &nbsp; P(A|M) = P(AM) / P(M)\
+&nbsp;- If A⊂M, then P(AM) = P(A) such that\
+&nbsp; &nbsp; P(A|M) = P(A) / P(M) ≥ P(A)\
 
 
 
