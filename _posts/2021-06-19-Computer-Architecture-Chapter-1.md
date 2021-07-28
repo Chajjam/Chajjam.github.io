@@ -1,5 +1,5 @@
 ---
-title: "Computer Architecture Day 1"
+title: "Computer Architecture Chapter 1"
 date: 2021-06-19
 categories: computer_architecture
 ---
@@ -19,28 +19,28 @@ Reference : Computer Organization and Design 5th edition\
 \
 **1.2 Eight Great Ideas in Computer Architecture**\
 \
-1) Design for Moore's Law (Graph)\
+&nbsp;1) Design for Moore's Law (Graph)\
 Moore's Law : integrated circuit resources double every 18-24 months\
 Computer architects must anticipate where the technology will be when the design finshes, not when it starts\
 \
-2) Use Abstraction to Simply Design (Picasso)\
+&nbsp;2) Use Abstraction to Simply Design (Picasso)\
 Use abstractions to represent the design effectively\
 \
-3) Make the Common Case Fast (Car)\
+&nbsp;3) Make the Common Case Fast (Car)\
 Enhance performance better than optimizing the rare case, and is also simpler\
 \
-4) Performance via Parallism (Airplane)\
+&nbsp;4) Performance via Parallism (Airplane)\
 Designs that get more performance by performing operations in parallel\
 \
-5) Performance via Pipelining (Pipe)\
+&nbsp;5) Performance via Pipelining (Pipe)\
 Pipelining : a particular pattern of parallelism\
 \
-6) Performance via Prediction (Crystall Ball)\
+&nbsp;6) Performance via Prediction (Crystall Ball)\
 Sometimes it is faster if recoverable and relatively accurate\
 \
-7) Hierarchy of Memories (Pyramid)\
+&nbsp;7) Hierarchy of Memories (Pyramid)\
 \
-8) Dependability via Redundancy (Truck)\
+&nbsp;8) Dependability via Redundancy (Truck)\
 Make systems dependable by including redundant components that can take over when a failure occurs and to help detect failures\
 \
 \
@@ -82,13 +82,13 @@ ex) 1000110010100000 tells a computer to add two numbers\
 \
 Basic functions of the hardware: inputting, outputting, processing, storing data\
 5 key components of a computer that performs the basic functions:\
-1) input\
-2) output\
-3) memory\
-4) datapath (called the processor with control)\
-5) control  (called the processor with datapath)\
+&nbsp;1) input\
+&nbsp;2) output\
+&nbsp;3) memory\
+&nbsp;4) datapath (called the processor with control)\
+&nbsp;5) control  (called the processor with datapath)\
 \
-THe most fascinating I/O device: graphics display\
+The most fascinating I/O device: graphics display\
 Liquid crystal displays (LCDs)\
 &nbsp;- does not produce light, but controls the transmission of light\
 &nbsp;- rod-shaped molecules in a liquid bends light entering the display; rods straighten out when a current is applied and no longer bend the light\
@@ -102,89 +102,85 @@ computer hardware support for graphics : raster refresh buffer (frame buffer)\
 &nbsp;- bit pattern per pixel is read out ot the graphics display at the refresh rate\
 \
 Touchscreen\
-&nbsp;- today many use capccitive sensing
-&nbsp;&nbsp;- people are electrical conductors
-&nbsp;&nbsp;- if an insulator like glass is covered with a transparent conductor, touching distorts the electrostatic field of the screen
-
-
-
--------------------------------------------
-
-* Vocab
-  
-- Personal computers (PCs)
-  : a computer for an individual, usually with a graphic display, a keyboard, and a mouse
-
-- Server
-  : a computer for larger programs and accessed only via a network
- 
-- Embedded computers
-  : a computer inside another device and used for running a single or a collection of software
-  
-- Personal mobile device (PMD)
-  : small, wireless devices to connect to the Internet (ex: smart phones, tablets)
-  
-- Cloud Computing
-  : larger collections of servers that provide services over the Internet. Relies on giant datacenters known as Warehouse Scale Copmuters (WSCs)
-  
-- Software as a service (SaaS)
-  : delivers software and data as a service over the Internet (ex: web search, social networking)
-  
-- Systems Software
-  : Software that provides services that are commonly useful like operating systems, compilers, loaders, assemblers...
-
-- Operating System
-  : Supervising program that manages the resources of a computer for the benefit of the programs that run on that computer
-  
-- Compiler
-  : A program that translates high-level language statements into assembly language statements
-
-- Binary Digit (bit)
-  : one of the two numbers in base 2 (0 or 1) that are the components of information
-
-- Instruction
-  : A command that computer hardware understands and obeys
-
-- Assembler
-  : A program that translates a symbolic version of instructions into the binary version
-
-- High-level Programming Languages
-  : A portable language such as C, C++, Java, or Visual Basic that is composed of words and algebraic
-    notation that can be translated by a compiler into assembly language
-
-- Input Device
-  : A mechanism through which the computer is fed information, such as a keyboard
-
-- Output Device
-  : A mechanism that conveys the result of a computation to a user, such as a display, or to another computer
-
-- Liquid Crystal Displays (LCDs)
-  : A display technology using a thin layer of liquid polymers that can be used to transmit or block
-    light according to whether a charge is applied
-
-- Active Matrix Display
-  : A liquid crystal display using a transistor to control the transmission of light at each individual pixel
-  
-- Pixel
-  : The smallest individual picture element
-
-- Integrated Circuit (Chip)
-  : A device combining ddozens to millions of transistors
-
-- Datapath
-  : The component of the processor that performs arithmetic operations
-  
-- Control
-  : The component of the processor that commands the datapath, memory, and I/O devices according
-    to the instructions of the programm
-
-- Memory
-  : The storage area in which programs are kept when they are running and that contains the data
-    needed by the running programs
-
-- Dynamic Random Access Memory (DRAM)
-  : Memory built as an integrated circuit; it provides random access to any location.
-
+&nbsp;- today many use capccitive sensing\
+&nbsp;&nbsp;- people are electrical conductors\
+&nbsp;&nbsp;- if an insulator like glass is covered with a transparent conductor, touching distorts the electrostatic field of the screen\
+\
+\
+\
+-------------------------------------------\
+\
+Vocab\
+\
+Personal computers (PCs)\
+: a computer for an individual, usually with a graphic display, a keyboard, and a mouse\
+\
+Server\
+: a computer for larger programs and accessed only via a network\
+\
+Embedded computers\
+: a computer inside another device and used for running a single or a collection of software\
+\ 
+Personal mobile device (PMD)\
+: small, wireless devices to connect to the Internet (ex: smart phones, tablets)\
+\  
+Cloud Computing\
+: larger collections of servers that provide services over the Internet. Relies on giant datacenters known as Warehouse Scale Copmuters (WSCs)\
+\
+Software as a service (SaaS)\
+: delivers software and data as a service over the Internet (ex: web search, social networking)\
+\ 
+Systems Software\
+: Software that provides services that are commonly useful like operating systems, compilers, loaders, assemblers...\
+\
+Operating System\
+: Supervising program that manages the resources of a computer for the benefit of the programs that run on that computer\
+\
+Compiler\
+: A program that translates high-level language statements into assembly language statements\
+\
+Binary Digit (bit)\
+: one of the two numbers in base 2 (0 or 1) that are the components of information\
+\
+Instruction\
+: A command that computer hardware understands and obeys\
+\
+Assembler\
+: A program that translates a symbolic version of instructions into the binary version\
+\
+High-level Programming Languages\
+: A portable language such as C, C++, Java, or Visual Basic that is composed of words and algebraic notation that can be translated by a compiler into assembly language\
+\
+Input Device\
+: A mechanism through which the computer is fed information, such as a keyboard\
+\
+Output Device\
+: A mechanism that conveys the result of a computation to a user, such as a display, or to another computer\
+\
+Liquid Crystal Displays (LCDs)\
+: A display technology using a thin layer of liquid polymers that can be used to transmit or block light according to whether a charge is applied\
+\
+Active Matrix Display\
+: A liquid crystal display using a transistor to control the transmission of light at each individual pixel\
+\  
+Pixel\
+: The smallest individual picture element\
+\
+Integrated Circuit (Chip)\
+: A device combining ddozens to millions of transistors\
+\
+Datapath\
+: The component of the processor that performs arithmetic operations\
+\
+Control\
+: The component of the processor that commands the datapath, memory, and I/O devices according to the instructions of the program\
+\
+Memory\
+: The storage area in which programs are kept when they are running and that contains the data needed by the running programs\
+\
+Dynamic Random Access Memory (DRAM)\
+: Memory built as an integrated circuit; it provides random access to any location.\
+\
 
 
 
