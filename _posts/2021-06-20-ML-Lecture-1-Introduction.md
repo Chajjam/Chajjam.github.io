@@ -3,7 +3,6 @@ title: "ML Lecture 1 Introduction"
 date: 2021-06-20
 categories: Machine_Learning
 ---
-
 **1.1 What is Machine learning**\
 \
 Field of study that gives computers the ability to learn without being explicitly programmed
