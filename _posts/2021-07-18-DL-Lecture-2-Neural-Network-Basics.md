@@ -1,5 +1,5 @@
 ---
-title: DL Lecture 2 Basics of Neural Network Programming
+title: "DL Lecture 2 Neural Network Basics"
 date: 2021-07-18
 categories: Neural_Network
 ---
