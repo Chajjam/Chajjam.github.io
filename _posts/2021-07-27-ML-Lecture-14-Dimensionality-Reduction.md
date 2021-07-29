@@ -32,3 +32,30 @@ x<sub>approx</sub> = U<sub>reduce</sub> * z\
 \
 \
 **14.6 Choosing the Number of Principal Components**\
+Typically, choose k to be smallest value so that:\ 
+(Average squared projection error) / (Total variation in the data) ≤ 0.01\
+=> 99% of variance is retained\
+\
+Algorithm:\
+Try PCA with k=1 (next 2, 3...)\
+=> Compute U<sub>reduce</sub>, z<sup>(1)</sup>, z<sup>(2)</sup>, ... , z<sup>(m)</sup>, x<sub>approx</sub><sup>(1)</sup>, ..., x<sub>approx</sub><sup>(m)</sup>\
+=> Check if (Error/Variation) ≤ 0.01\
+\
+[U, S, V] = svd(Sigma)\
+s = [[s11, 0, 0, 0,...], [0, s22, 0, 0, ...]. ..., [0, ..., Snn]]\
+For given k,\
+1 - (∑<sup>k</sup><sub>i=1</sub>S<sub>ii</sub>) / (∑<sup>n</sup><sub>i=1</sub>S<sub>ii</sub>) ≤ 0.01\
+\
+\
+**14.7 Advice for Applying PCA**\
+Supervised learning speedup:\
+(x<sup>(i)</sup>, y<sup>(i)</sup>) ... where x is very high dimension\
+Extract inputs: Apply PCA to unlabeled dataset x<sup>(i)</sup>... and make it to z<sup>(i)</sup>, which is lower dimension\
+As a result: new training set (z<sup>(i)</sup>, y<sup>(i)</sup>)...\
+\
+Note: mapping x->z should be defined by running PCA only on TRAINING SET. This mapping can be applied as well to the exampels 
+ 
+
+
+
+
