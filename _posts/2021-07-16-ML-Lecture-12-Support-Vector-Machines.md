@@ -1,5 +1,5 @@
 ---
-title: "ML Lecture 12 Support Vector Machines
+title: "ML Lecture 12 Support Vector Machines"
 date: 2021-07-16
 categories: Support_Vector_Machine
 ---
