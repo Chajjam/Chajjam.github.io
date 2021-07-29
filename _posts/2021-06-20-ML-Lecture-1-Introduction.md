@@ -44,7 +44,7 @@ Clustering algorithm: break dataset into separate clusters\
 ex: Google News, Gene Sequencing, organizaing computing clusters, social network analysis, market segmentation, astronomical data analysis\
 \
 Cocktail party problem\
-: in noisy party, two speakers use microphones\
+in noisy party, two speakers use microphones\
 => using unsupervised learning, separate two different voices\
 [W,s,v] = svd((repmat(sum(x.*x,1),size(x,1),1).*x)*x');\
 \
