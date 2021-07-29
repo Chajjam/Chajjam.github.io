@@ -123,10 +123,3 @@ Train a neural network\
 &nbsp; => for i = 1:m (for/back prop using examples and get activations)\
 &nbsp;5. Gradient checking, then disable gradient checking code\
 &nbsp;6. Gradient descent or advanced optimization method with backpropagation to try to minimize J(Θ) as a function of parameters Θ
-
-
-
-
-
-
-
