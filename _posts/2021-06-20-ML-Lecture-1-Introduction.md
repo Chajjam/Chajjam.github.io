@@ -4,7 +4,6 @@ date: 2021-06-20
 categories: Machine_Learning
 ---
 **1.1 What is Machine learning**\
-\
 Field of study that gives computers the ability to learn without being explicitly programmed
 \
 A computer program is said to learn from experience E with respect to some task T and some\
@@ -16,8 +15,7 @@ What is the task T in this setting?\
 \
 My answer: Watching you label emails as spam or not spam (correct)\
 \
-2 Machine learning algorithms: supervised learning, unsupervised learning\
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (reinforcement learning, recommender systems...)\
+2 Machine learning algorithms: supervised learning, unsupervised learning (reinforcement learning, recommender systems...)\
 \
 \
 **1.2 Supervised Learning**\
