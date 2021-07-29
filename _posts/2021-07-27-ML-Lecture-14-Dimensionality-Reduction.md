@@ -53,9 +53,11 @@ Supervised learning speedup:\
 Extract inputs: Apply PCA to unlabeled dataset x<sup>(i)</sup>... and make it to z<sup>(i)</sup>, which is lower dimension\
 As a result: new training set (z<sup>(i)</sup>, y<sup>(i)</sup>)...\
 \
-Note: mapping x->z should be defined by running PCA only on TRAINING SET. This mapping can be applied as well to the exampels 
- 
-
-
-
-
+Note: mapping x->z should be defined by running PCA only on TRAINING SET. This mapping can be applied as well to the examples in cross validation and test sets\
+\
+Bad use of PCA: to prevent overfitting\
+Use z<sup>(i)</sup> instead of x<sup>(i)</sup> to reduce the number of fetures to k<n. Thus, fewer features, less likely to overfit.\
+This might work, but is not a good way to address overfitting. Use regularization instead\
+\
+Where PCA should not be used:\
+Before implementing PCA, first try running whatever you want to do with the original/raw data x<sup>(i)</sup>. Only if that does not do what you want, then implement PCA and consider using z<sup>(i)</sup>
