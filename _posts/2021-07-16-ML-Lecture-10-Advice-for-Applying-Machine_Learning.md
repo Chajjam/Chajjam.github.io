@@ -1,5 +1,5 @@
 ---
-title: "ML Week 10 Advice for Applying Machine Learning"
+title: "ML Lecture 10 Advice for Applying Machine Learning"
 date: 2021-07-16
 categories: Machine_Learning
 ---
