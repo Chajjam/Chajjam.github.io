@@ -161,5 +161,36 @@ Expected value:\
 &nbsp;- expected value is the average of the numbers represented by a RV\
 &nbsp;- it is equal to the first moment of PDF\
 &nbsp; &nbsp; E{X} = ∫<sub>-∞</sub><sup>∞</sup>xf(x)dx\
-
-
+&nbsp;- for discrete RV with a PDF that takes general form f(x)=∑p<sub>i</sub>δ(x-x<sub>i</sub>):\
+&nbsp; &nbsp; E{X} = ∫<sub>-∞</sub><sup>∞</sup>x(∑p<sub>i</sub>δ(x-x<sub>i</sub>))dx\
+&nbsp; &nbsp; &nbsp; =∑p<sub>i</sub>x<sub>i</sub>\
+&nbsp;- expected value operation is linear. If X and Y are independent random variables and c is a constant, we can write\
+&nbsp; &nbsp; E{X+Y} = E{X} + E{Y}\
+&nbsp; &nbsp; E{cX} = cE{X}\
+\
+Functions of a random variable\
+&nbsp;- if Y is the function of a random variable such that Y=g(X)\
+&nbsp; &nbsp; E{Y} = ∫<sub>-∞</sub><sup>∞</sup>g(x)f(x)dx\
+\
+Variance and higher order moments\
+&nbsp;- the nth order moment of an RV is defined as\
+&nbsp; &nbsp; m<sub>n</sub> = E{X<sup>n</sup>} = ∫<sub>-∞</sub><sup>∞</sup>x<sup>n</sup>f(x)dx\
+&nbsp;- variance is defined as:\
+&nbsp; &nbsp; σ<sub>X</sub><sup>2</sup>\
+&nbsp; &nbsp; = E{(X-μ)<sup>2</sup>}\
+&nbsp; &nbsp; = E{X<sup>2</sup>} + E{-2μX} + E{μ<sup>2</sup>}\
+&nbsp; &nbsp; = E{X<sup>2</sup>} - 2μE{X} + μ<sup>2</sup>\
+&nbsp; &nbsp; = E{X<sup>2</sup>} - 2E{X}<sup>2</sup> + E{X}<sup>2</sup>\
+&nbsp; &nbsp; = E{X<sup>2</sup>} - E{X}<sup>2</sup>\
+&nbsp;- variance can be considered a function of RV written as z = g(x) = (x-μ)<sup>2</sup> so that\
+&nbsp; &nbsp; σ<sub>X</sub><sup>2</sup> = ∫<sub>-∞</sub><sup>∞</sup>(x-μ)<sup>2</sup>f(x)dx\
+\
+Moment generating functions\
+&nbsp;- moment generating functions are calculated as\
+&nbsp; &nbsp; Φ(s) = Φ<sub>X</sub>(s) = ∫<sub>-∞</sub><sup>∞</sup>f<sub>X</sub>(x)e<sup>sx</sup>dx = E{e<sup>sX</sup>}\
+&nbsp;- higher order moments are then calculated by\
+&nbsp; &nbsp; d/dx Φ(s) = ∫<sub>-∞</sub><sup>∞</sup>f<sub>X</sub>(x)xe<sup>sx</sup>dx = E{Xe<sup>sX</sup>}\
+&nbsp;- this can be extended to find the nth order moments\
+&nbsp; &nbsp; d<sup>n</sup>/ds<sup>n</sup>Φ(s) = E{X<sup>n</sup>e<sup>sX</sup>}\
+&nbsp; &nbsp; d<sup>n</sup>/ds<sup>n</sup>Φ(s)|<sub>s=0</sub> = E{X<sup>n</sup>}\
+&nbsp;- Moment generating functions can also take the mean of a function of a random variable
