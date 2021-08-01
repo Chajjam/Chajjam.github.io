@@ -38,7 +38,7 @@ Classic definition of probability:\
 &nbsp; &nbsp;- If A⊆B then AB=A and AA=A\t
 &nbsp;- Mutually Exclusive Sets: Two sets A and B are mutually exclusive if they have no elements in common\
 &nbsp;- Complement:\
-&nbsp; &nbsp;- The complement of A (A<sup>-</sup>) defines a second set that contains all teh elements in S that are not in A\
+&nbsp; &nbsp;- The complement of A (A<sup>-</sup>) defines a second set that contains all the elements in S that are not in A\
 &nbsp; &nbsp;- A∪A<sup>-</sup> = S, AA<sup>-</sup> = {∅}, {∅<sup>-</sup>} = S\
 &nbsp;- Partition of a set S is a series of mutually exclusive subsets that completely define S such that\
 &nbsp; &nbsp; S = A<sub>1</sub> + ... + A<sub>N</sub>\
@@ -61,10 +61,11 @@ Probability & Set Notation:\
 &nbsp;- Trial: Performing an experiment that generates a single event\
 \
 \
-**Lecture 2: The Axioms of Probability & Conditional Probability**
-P(A) ≥ 0\
-P(S) = 1\
-If AB = {∅}, then P(A∪B) = P(A) + P(B)\
+**Lecture 2: The Axioms of Probability & Conditional Probability**\
+The Axioms of Probability:\
+&nbsp; P(A) ≥ 0\
+&nbsp; P(S) = 1\
+&nbsp; If AB = {∅}, then P(A∪B) = P(A) + P(B)\
 \
 If AB != {∅},\
 A∪B = A∪A<sup>-</sup>B\
@@ -77,6 +78,88 @@ Conditional Probability:\
 &nbsp; &nbsp; P(A|M) = P(AM) / P(M)\
 &nbsp;- If A⊂M, then P(AM) = P(A) such that\
 &nbsp; &nbsp; P(A|M) = P(A) / P(M) ≥ P(A)\
-
+\
+Total Probability Theorem\
+&nbsp;- If A<sub>1</sub>,...,A<sub>N</sub> is a partition of universal set S, then\
+&nbsp; &nbsp; P(B) = ∑P(B|A<sub>i</sub>)P(A<sub>i</sub>)\
+Proof:\
+&nbsp;B = SB = AB => apply third axiom\
+\
+Bayes Theorem:\
+P(AB) = P(BA)\
+P(A|B)P(B) = P(B|A)P(A)\
+Using the total probability theorem,\
+P(A|B) = P(B|A)P(A)/P(B) = P(B|A)P(A)/(P(B|A)P(A) + P(B|A<sup>-</sup>)P(A<sup>-</sup>)\
+where the partition we used on the denominator was A,A<sup>-</sup>\
+\
+Independence\
+&nbsp;- Two events A and B are independent iff P(AB) = P(A)P(B)\
+&nbsp;- Mutually exclusive events cannot be independent\
+&nbsp;- The impact on conditional probability\
+&nbsp; &nbsp; P(A|B) = P(AB)/P(B) = P(A)P(B)/P(B) = P(A)\
+&nbsp;- For N independent events\
+&nbsp; &nbsp; P(A<sub>1</sub>A<sub>2</sub>...A<sub>N</sub>) = P(A<sub>1</sub>)P(A<sub>2</sub>)...P(A<sub>N</sub>)\
+\
+\
+**Lecture 3: Random Variable Fundamentals**\
+Random variable as a function:\
+&nbsp;- function maps from domain to range\
+&nbsp;- random varaible is a function that maps the outcome of a random experiment or process to a number\
+&nbsp;- random experiment is conducted many times and each time is a trial\
+&nbsp;- RV domain is the experimental outcome and RV range is the number the outcome is mapped to\
+&nbsp;- experiment result is an outcome or a realization of the RV\
+\
+Continuous vs Discrete RV\
+&nbsp;- discrete random variables: RVs with a countable number of outcomes\
+&nbsp;- some experiments have results that can be mapped to any real number in either a closed or open interval => can use histograms by partition\
+\
+Probability density function (PDF)\
+&nbsp;- The PDF of a random varaible X is denoted f<sub>X</sub>(x)\
+&nbsp;- Example: a uniform distribution is the PDF of a RV where the numbers between a and b are equally likely\
+&nbsp; &nbsp; f<sub>X</sub>(x) = 1/(b-a), a≤x≤b // 0, otherwise\
+&nbsp;- Gaussian PDF: 1/(√2π<sup>2</sup>)exp[-(x-μ)<sup>2</sup>/2σ<sup>2</sup>]\
+\
+PDF properties:\
+&nbsp;- A PDF is normalized to have unit area such that ∫<sub>-∞</sub><sup>∞</sup>f<sub>X</sub>(x)dx = 1\
+&nbsp;- The probability of a single realization of X falls between x<sub>1</sub> and x<sub>2</sub>\
+&nbsp; &nbsp; P(x<sub>1</sub> ＜ x ≤ x<sub>2</sub>) = ∫<sub>x<sub>1</sub></sub><sup>x<sub>2</sub></sup>f<sub>X</sub>(x)dx\
+&nbsp;- The integral of a Gaussian PDF has no closed form solution but can be expressed in terms of the Q-function\
+&nbsp; &nbsp; Q(x) = 1/√2π ∫<sub>x</sub><sup>∞</sup>e<sup>-y<sup>2</sup>/2</sup>dy\
+&nbsp;- The Q-function can still be used for an arbitrary mean and variance\
+&nbsp; &nbsp; P(X≥α) = 1/√(2π)σ ∫<sub>α</sub><sup>∞</sup>exp[-(x-μ)<sup>2</sup>/2σ<sup>2</sup>]dx\
+&nbsp;- Let y = (x-μ)/σ so that dy = dx/σ\
+&nbsp;- Limits: x=α becomes y=(α-μ)/σ and x=∞ is y=(∞-μ)/σ and x=∞ is y=(∞-μ)/σ=∞.\
+&nbsp; &nbsp; P(X≥α) = 1/√(2π) ∫<sub>(α-μ)/σ</sub><sup>∞</sup>exp[y<sup>2</sup>/2]dy\
+&nbsp; &nbsp; = Q((α-μ)/σ)\
+\
+PDF's for discrete RV's\
+&nbsp;- the probability that a continuous RV takes on any specific value:\
+&nbsp; &nbsp; P(X=x<sub>0</sub>) = ∫<sub>x<sub>0</sub></sub><sup>x<sup>0</sup></sup>f<sub>X</sub>(x)dx = 0\
+&nbsp;- PDF of a discrete RV is made up of delta functions\
+&nbsp; &nbsp; f<sub>X</sub>(x) = ∑P(X=x<sub>i</sub>)δ(x-x<sub>i</sub>)\
+&nbsp;- discrete PDF can now be integrated\
+&nbsp; &nbsp; P(X=1) = lim<sub>δ->0</sub> ∫<sub>1-δ</sub><sup>1+δ</sup>f<sub>X</sub>(x)dx\
+&nbsp;- note that discrete RV's are also represented using probability mass functions (PMF's). These are simply functions that are only defined at discrete values such that p<sub>X</sub>(x<sub>i</sub>) = P(X = x<sub>i</sub>)\
+\
+Cumulative Distribution Functions\
+&nbsp;- Also known as probability distribution functions\
+&nbsp;- CDF directly yields a probability value\
+&nbsp; &nbsp; F<sub>X</sub>(x) = P(X≤x)\
+&nbsp;- Coin toss: F<sub>X</sub>(x) = 0, x＜0 // 0.5, 0≤x＜1 // 1, x≥1\
+\
+CDF properties:\
+&nbsp;- F<sub>X</sub>(∞)=1 and F<sub>X</sub>(-∞)=0\
+&nbsp;- The function is non-decreasing\
+&nbsp;- For any x<sub>2</sub>＞x<sub>1</sub>, P(x<sub>1</sub>＜x≤x<sub>2</sub>) = F<sub>X</sub>(x<sub>2</sub>)-F<sub>X</sub>(x<sub>1</sub>)\
+&nbsp; PDF and CDF related:\
+&nbsp; &nbsp; f<sub>x</sub>(x) = dF<sub>X</sub>(x)/dx (PDF is derivative of CDF)\
+&nbsp; &nbsp; F<sub>X</sub>(x) = ∫<sub>-∞</sub><sup>X</sup>f<sub>X</sub>(α)dα (CDF is integral of PDF)\
+\
+\
+**Lecture 4: Moments of a Random Variable**\
+Expected value:\
+&nbsp;- expected value is the average of the numbers represented by a RV\
+&nbsp;- it is equal to the first moment of PDF\
+&nbsp; &nbsp; E{X} = ∫<sub>-∞</sub><sup>∞</sup>xf(x)dx\
 
 
