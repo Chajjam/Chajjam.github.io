@@ -3,7 +3,7 @@ title: "Data Structures"
 date: 2021-06-19 14:09 -0400
 categories: Data_Structure
 ---
-**Chpater 1 A C++ Primer**
+**Chpater 1: A C++ Primer**
 \
 **1.1 Basic C++ Programming Elements**\
 \
@@ -130,7 +130,7 @@ To force a literal to be a float, add suffix f or F (ex: 2.0f)\
 &nbsp;- can initialize by indicating values then the compiler figures the size out\
 &nbsp;- can declare an array of pointers\
 &nbsp; &nbsp; ex: int* r[17] declares an array of r consisting of 17 pointers to int\
-&nbsp; &nbsp; * r[16] ix the value of the integer pointed by last element\
+&nbsp; &nbsp; * r[16] is the value of the integer pointed by last element\
 \
 *Pointers and Arrays*
 
