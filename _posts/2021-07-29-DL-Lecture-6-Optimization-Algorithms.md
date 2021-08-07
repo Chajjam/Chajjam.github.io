@@ -51,12 +51,43 @@ If t becomes large, this term approaches 0, so no effect\
 \
 **6.6 Gradient Descent with Momentum**\
 Use exponentially weighted averages of gradients to update weights instead
-
-
-
-
-
-
-
-
-
+\
+\
+**6.7 RMSprop**\
+\
+\
+**6.8 Adam Optimization Algorithm**\
+Intialize V<sub>dW</sub>=0, S<sub>dW</sub>=0, V<sub>db</sub>=0, S<sub>db</sub>=0\
+On iteration t:\
+&nbsp; Compute dW, db using current mini-batch\
+&nbsp; V<sub>dW</sub> = β<sub>1</sub>V<sub>dW</sub>\
+&nbsp; V<sub>db</sub> = β<sub>1</sub>V<sub>db</sub> + (1-β<sub>1</sub>)db  (momentum)\
+&nbsp; S<sub>dW</sub> = β<sub>2</sub>s<sub>dW</sub>\
+&nbsp; S<sub>db</sub> = β<sub>2</sub>S<sub>db</sub> + (1-β<sub>2</sub>)db<sup>2</sup> (RMS prop)\
+&nbsp; V<sub>dW</sub><sup>corrected</sup> = V<sub>dW</sub>/(1-β<sub>1</sub><sup>t</sup>)\
+&nbsp; V<sub>db</sub><sup>corrected</sup> = V<sub>db</sub>/(1-β<sub>1</sub><sup>t</sup>)\
+&nbsp; S<sub>dW</sub><sup>corrected</sup> = S<sub>dW</sub>/(1-β<sub>2</sub><sup>t</sup>)\
+&nbsp; S<sub>db</sub><sup>corrected</sup> = V<sub>db</sub>/(1-β<sub>2</sub><sup>t</sup>)\
+&nbsp; W := W - α(V<sub>dW</sub><sup>corrected</sup> / (√S<sub>dW</sub><sup>corrected</sup>+ε))\
+&nbsp; b := b - α(V<sub>db</sub><sup>corrected</sup> / (√S<sub>db</sub><sup>corrected</sup>+ε))\
+\
+Hyperparameters:\
+α: need to be tuned\
+β<sub>1</sub>: 0.9 recommended (dW)\
+β<sub>2</sub>: 0.999 recommended (dW<sup>2</sup>)\
+ε: 10<sup>-8</sup>\
+\
+Adam: Adaptive moment estimation\
+\
+\
+**6.9 Learning Rate Decay**\
+α = 1 / (1 + DecayRate * epoch) * α<sub>0</sub>\
+\
+Other method:\
+&nbsp;- α = 0.95<sup>epoch_num</sup>α<sub>0</sub>\
+&nbsp;- α = k/√epoch_num * α<sub>0</sub> or k/√t * α<sub>0</sub>\
+&nbsp;- discrete staircase\
+&nbsp;- manual decay\
+\
+\
+**6.10 The Problem of Local Optima**
