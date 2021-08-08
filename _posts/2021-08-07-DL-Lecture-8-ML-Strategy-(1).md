@@ -17,3 +17,11 @@ Ideas:\
 \
 \
 **8.2 Orthogonalization**\
+Orthogonalization: each "knob" does one thing\
+\
+\
+**8.3 Single Number Evaluation Metric**
+Using single number evaluation metric helps us to make decision faster\
+\
+\
+**8.4 Satisficing and Optimizing Metric**\
