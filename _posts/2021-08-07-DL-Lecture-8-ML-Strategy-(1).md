@@ -40,12 +40,39 @@ Size of test set: Set your test set to be big enough to give high confidence in 
 \
 \
 **8.7 When to Change Dev/Test Sets and Metrics?**\
-
-
-
-
-
-
-
-
-
+If metric/dev prefers algorithm A but you and users prefer B, you should change the evaluation metric.\
+Ex) Error: 1/m * sigma[w * J], where w is 1 if nonporn, 100 if porn\
+\
+\
+**8.8 Why Human-Level Performance?**\
+Bayes optimal error: the best possible error that performance cannot do better\
+Humans are quite good at a lot of tasks. So long as ML is worse than humans, you can:\
+&nbsp;- Get labeled data from humans\
+&nbsp;- Gain insight from manual error analysis: Why did a person get this right?\
+&nbsp;- Better analysis of bias/variance\
+\
+\
+**8.9 Avoidable Bias**\
+If the algorithm is not doing as good as humans on training set, foucs on bias.\
+Avoidable bias: difference between human level error and Bayes error\
+\
+\
+**8.10 Understanding Human-level Performance**\
+Use human level error as an estimate for Bayes error, and note that Bayes error is less than human level error\
+\
+\
+**8.11 Surpassing Human-level Performance**\
+Problems where ML significantly surpasses human-level performance:\
+&nbsp;- online advertising\
+&nbsp;- product recommendations\
+&nbsp;- logistics (predicting transit time)\
+&nbsp;- loan approvals\
+&nbsp; &nbsp;=> all are learning from structured data\
+&nbsp; &nbsp;=> not natural perception (which humans are very good at)\
+&nbsp; &nbsp;=> need a lot of data\
+\
+\
+**8.12 Improving your Model Performance**\
+Two fundamental assumptions of supervised learning:\
+&nbsp;- you can fit the training set pretty well\
+&nbsp;- the training set performance generalizes pretty well to the dev/test set
