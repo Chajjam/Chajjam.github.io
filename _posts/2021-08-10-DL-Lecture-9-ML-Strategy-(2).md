@@ -53,9 +53,19 @@ When transfer learning makes sense?\
 When does multi-task learning makes sense\
 &nbsp;- training on a set of tasks that could benefit from having shared lower-level features\
 &nbsp;- usually: amount of data you have for each task is quite similar\
-
-
-
-
-
-
+\
+\
+**9.9 What is End-to-end Deep Learning?**\
+Multi-step task performs better because there are enough data for each process, but not for combined process\
+\
+\
+**9.10 Whether to use End-to-end Deep Learning**\
+Pros and cons of end-to-end deep learning:\
+Pros:\
+&nbsp;- Let the data speak\
+&nbsp;- Less hand-designing of components neeeded\
+Cons:\
+&nbsp;- May need large amount of data\
+&nbsp;- Excludes potentially useful hand-designed components\
+\
+Key question: do you have sufficient data to learn a function of the complexity needed to map x to y?
