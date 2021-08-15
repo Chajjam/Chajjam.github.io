@@ -17,7 +17,12 @@ AlexNet\
 &nbsp;- Local Response Optimization\
 \
 VGG-16\
-&nbsp;- simplified architecture
-
+&nbsp;- simplified architecture\
+&nbsp;- downside: large network\
+\
+\
+**ResNets**\
+a<sup>[l]</sup> -> linear -> ReLU -> a<sup>[l+1]</sup> -> linear -> ReLU -> a<sup>[l+2]</sup>\
+shortcut / skip connection: adding a<sup>[l]</sup> before applying ReLU activation
 
 
