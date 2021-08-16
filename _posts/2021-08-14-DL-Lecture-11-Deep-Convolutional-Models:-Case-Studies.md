@@ -21,8 +21,18 @@ VGG-16\
 &nbsp;- downside: large network\
 \
 \
-**ResNets**\
+**11.3 ResNets**\
 a<sup>[l]</sup> -> linear -> ReLU -> a<sup>[l+1]</sup> -> linear -> ReLU -> a<sup>[l+2]</sup>\
-shortcut / skip connection: adding a<sup>[l]</sup> before applying ReLU activation
-
-
+shortcut / skip connection: adding a<sup>[l]</sup> to z<sup>[l+2]</sup> before applying ReLU activation\
+\
+Plain network: in theory, deeper network should always work better, but it is not true in reality\
+ResNet: trining error constantly decreases as the number of layers increases\
+\
+\
+**11.4 Why ResNets Work?**\
+X -> Big NN -> a<sup>[l]</sup> -> layer1 -> layer2 -> a<sup>[l+2]</sup>\
+a<sup>[l+2]</sup>\
+= g(z<sup>[l+2]</sup> + a<sup>[l]</sup>\
+= g(W<sup>[l+2]</sup>a<sup>[l+1]</sup> + b<sup>[l+2]</sup> + a<sup>[l]</sup>)\
+If W<sup>[l+2]</sup>=0 and b<sup>[l+2]</sup>=0, g(a<sup>[1]</sup>) = a<sup>[l]</sup>\
+=> Identity function is easy for residual block to learn
