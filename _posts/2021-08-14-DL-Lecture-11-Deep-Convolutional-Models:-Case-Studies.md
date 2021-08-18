@@ -35,4 +35,23 @@ a<sup>[l+2]</sup>\
 = g(z<sup>[l+2]</sup> + a<sup>[l]</sup>\
 = g(W<sup>[l+2]</sup>a<sup>[l+1]</sup> + b<sup>[l+2]</sup> + a<sup>[l]</sup>)\
 If W<sup>[l+2]</sup>=0 and b<sup>[l+2]</sup>=0, g(a<sup>[1]</sup>) = a<sup>[l]</sup>\
-=> Identity function is easy for residual block to learn
+=> Identity function is easy for residual block to learn\
+\
+\
+**11.5 Networks in Networks and 1x1 Convolutions**\
+What 1x1 convolution does: having a fully connected network\
+also called network in network\
+can be used to shrink dimension\
+\
+\
+**11.6 Inception Network Motivation**\
+Instead of picking one of various filter sizes or pooling, do them all and concatenate all the outputs and let the network learn whatever parameter it wants.\
+The computional cost is pretty large, but we can reduce it by using 1x1 convolution as a "bottleneck layer".\
+\
+\
+**11.7 Inception Network**\
+
+
+
+
+
