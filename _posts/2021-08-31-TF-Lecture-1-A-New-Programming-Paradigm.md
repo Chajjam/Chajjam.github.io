@@ -7,7 +7,7 @@ categories: Tensorflow
 \
 **1.2 A Primer in Machine Learning**\
 \
-**1.3 The 'Hello World' of Neural Networks"**\
+**1.3 The 'Hello World' of Neural Networks"**
 ```Python
 model = keras.Sequential([keras.layers.Dense(units=1, input_shape=[1])])
 model.compile(optimizer='sgd', loss='mean_squared_error')
